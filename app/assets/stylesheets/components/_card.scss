@@ -5,7 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+
+  color: #0A522D;
+
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -13,8 +15,101 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.main-card-1 {
+  background-color: #EBEBEB;
+  border-radius: 5%;
+}
+.main-card-2 {
+  width: 300px;
+  
+  img {
+    width: 100%;
+    border-radius: 5%;
+  }
+}
+  
+main.cards {
+    display: flex;
+    padding: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    height: 300px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 12px 0;
+    font-weight: bold;
+    color: #0A522D;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 95%;
+    margin-bottom: 8px;
+    color: #0A522D;
+}
+
+main.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #020202;
+}
+main.cards section.card.shop {
+    box-shadow: 20px 20px 50px -30px #020202;
+}
+main.cards section.card.about {
+    box-shadow: 20px 20px 50px -30px #020202;
+}
+
+@media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .task-card{
   padding: 2rem;
   background-color: $light-green;
   border-radius: 1rem;
 }
+

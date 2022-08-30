@@ -15,12 +15,13 @@
   width: 200px;
 }
 
-.navbar-lewagon .navbar-brand {
-  width: 40px;
-  color: #fff;
-}
-
 .nav-link {
   color: #0A522D;
   font-size: 0.8rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
