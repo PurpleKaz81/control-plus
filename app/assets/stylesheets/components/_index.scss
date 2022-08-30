@@ -1,0 +1,20 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "form_legend_clear";
+@import "navbar";
+@import "card";
+@import "logo";
+@import "footer";
+
+
+
+
+body {
+
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-shadow: 0.1;
+}
