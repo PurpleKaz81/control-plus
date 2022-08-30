@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
 
   resources :tasks
-  resources :finances
+  resources :finances do
+    collection do
+      get :inflow
+      get :outflow
+    end
+  end
 end
