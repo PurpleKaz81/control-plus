@@ -7,16 +7,12 @@
 @import "logo";
 @import "footer";
 @import "background";
-@import "header";
-
-
-
+@import "headers";
+@import "body";
 
 body {
-
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    text-shadow: 0.1;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
