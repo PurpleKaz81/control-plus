@@ -1,1 +1,11 @@
-<h1>Edite Sua Tarefa</h1>
+<div class="row justify-content-center w-100">
+  <div class="col-6 mt-3">
+    <h1><strong>Edite sua tarefa</strong></h1>
+    <%= render "form", task: @task %>
+
+    <div>
+      <%= link_to "Voltar as tarefas", edit_task_path, class: "btn btn-secondary mt-3 mb-3" %>
+    </div>
+
+    </div>
+  </div>

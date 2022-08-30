@@ -4,6 +4,20 @@
 
   <div class="col-12 col-md-6">
     <h1 class="text-task text-center"><strong>Tarefas</strong></h1>
+
+    <div class="d-flex justify-content-center row w-100">
+      <%= form_with url: tasks_path, method: :get, class: "d-flex col-6 mb-4" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control" %>
+      <%= submit_tag "Search", class: "btn btn-form" %>
+      <% end %>
+
+    </div>
+
+
+
+
     <% @tasks.each do |task| %>
       <div class="d-flex justify-content-between task-card">
         <p class="m-0"><%= task.content %></p>
@@ -19,19 +33,11 @@
       </div>
     <% end %>
 
-    <%# query space%>
-    <%#
-    <form class="form-group col-4 mb-4">
-      <ul>
-        <% @tasks.each do |task| %>
-        <%# <%= task.content %>
-        <%# <% end %>
-      <%# </ul>
-    </form> %>
 
 
-    <div>
-      <%= link_to "Nova tarefa", new_task_path, class: "btn btn-success mt-3 mb-3" %>
+
+    <div class="d-flex justify-content-center">
+      <%= link_to "Nova tarefa", new_task_path, class: "btn mt-3 mb-3 btn-form" %>
     </div>
 
   </div>
