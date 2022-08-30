@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :tasks
   has_many :finances
+  validates :first_name, :last_name, :phone_number, :email, :password, presence: true
 end
