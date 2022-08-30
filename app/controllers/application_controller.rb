@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update,
                                       keys: %i[first_name last_name phone_number email password])
   end
+
+  private
+
+  def after_sign_out_path_for(_resource_or_scope)
+    root_path
+  end
 end
