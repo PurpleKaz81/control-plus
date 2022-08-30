@@ -1,0 +1,12 @@
+<%= simple_form_for(@finance) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :category, placeholder: "Descreva sua Categoria" %>
+    <%= f.input :description, placeholder: "Descreva sua Entrada/Saída" %>
+    <%= f.input :value, placeholder: "Qual o Valor de sua Entrada/Saída?" %>
+    <%= f.input :date, placeholder: "Quando Ocorreu sua Entrada/Saída?" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>
