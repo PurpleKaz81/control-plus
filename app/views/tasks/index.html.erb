@@ -3,7 +3,7 @@
 <div class="d-flex justify-content-center row w-100">
 
   <div class="col-12 col-md-6">
-    <h1 class="text-task text-center">Tarefas</h1>
+    <h1 class="text-task text-center"><strong>Tarefas</strong></h1>
     <% @tasks.each do |task| %>
       <div class="d-flex justify-content-between task-card">
         <p class="m-0"><%= task.content %></p>
@@ -18,6 +18,7 @@
 
       </div>
     <% end %>
+
     <%# query space%>
     <%#
     <form class="form-group col-4 mb-4">
@@ -30,7 +31,7 @@
 
 
     <div>
-      <%= link_to "Nova tarefa", new_task_path, class: "btn btn-secondary mt-3 mb-3" %>
+      <%= link_to "Nova tarefa", new_task_path, class: "btn btn-success mt-3 mb-3" %>
     </div>
 
   </div>
