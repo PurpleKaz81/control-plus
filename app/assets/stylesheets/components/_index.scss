@@ -8,13 +8,13 @@
 @import "footer";
 @import "background";
 @import "headers";
-@import "body";
+@import "buttons";
 
 body {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
