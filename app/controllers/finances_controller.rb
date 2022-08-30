@@ -30,7 +30,7 @@ class FinancesController < ApplicationController
   def destroy
     @finance = Finance.find(params[:id])
     @finance.destroy
-    redirect_to finances_path, notice: 'Sua Entrada/Saída Foi Deletada COm Sucesso.'
+    redirect_to finances_path, notice: 'Sua Entrada/Saída Foi Deletada Com Sucesso.'
   end
 
   private
