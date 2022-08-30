@@ -1,1 +1,43 @@
-<h1>Minhas Tarefas</h1>
+<%= link_to "Voltar", dashboard_path %>
+
+<div class="d-flex justify-content-center row w-100">
+
+  <div class="col-12 col-md-6">
+    <h1 class="text-task text-center"><strong>Tarefas</strong></h1>
+    <% @tasks.each do |task| %>
+      <div class="d-flex justify-content-between task-card">
+        <p class="m-0"><%= task.content %></p>
+        <div class="d-flex">
+          <%= link_to edit_task_path(task), class: "text-success mx-2" do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+          <%= link_to task_path(task), class: "text-danger mx-2", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </div>
+
+      </div>
+    <% end %>
+
+    <%# query space%>
+    <%#
+    <form class="form-group col-4 mb-4">
+      <ul>
+        <% @tasks.each do |task| %>
+        <%# <%= task.content %>
+        <%# <% end %>
+      <%# </ul>
+    </form> %>
+
+
+    <div>
+      <%= link_to "Nova tarefa", new_task_path, class: "btn btn-success mt-3 mb-3" %>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<%# cada tarefa com editar/excluir %>

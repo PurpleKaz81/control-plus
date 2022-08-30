@@ -11,8 +11,6 @@
 @import "button";
 
 
-
-
 body {
 
     background-color: #ffffff;
@@ -20,4 +18,8 @@ body {
     flex-direction: column;
     height: 100vh;
     text-shadow: 0.1;
+}
+
+h1 {
+  color: $dark-green;
 }
