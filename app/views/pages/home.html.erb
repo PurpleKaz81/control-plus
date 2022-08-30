@@ -1,55 +1,62 @@
 <!--Hey! This is the original version
 of Simple CSS Waves-->
+<div class="container">
+  <div class="main-grid">
+      <div class="main-card-1">
+          <h2> Lorem ipsum dolor sit amet. In internos odit nam perspiciatis.</h2>
+          <p> Qui consequatur quia eum suscipit consequatur qui commodi eaque 
+          ut quas dolor ut obcaecati accusantium aut animi corrupti ad laborum iste.</p>
+        <%= link_to "Cadastre-se", new_user_registration_path, class: "nav-link btn1" %>   
+      </div>
 
-<div class="header">
-<main class="cards">
-        <section class="card contact">
-            <div class="icon">
-                <img src="assets/despesas.svg" alt="Controle suas despesas">
-                
-            </div>
-            <h3>Controle suas despesas</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        </section>
-        <section class="card shop">
-            <div class="icon">
-                <img src="assets/tarefas.svg" alt="Shop here.">
-            </div>
-            <h3>Gerencia suas tarefas diárias</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        </section>
-        <section class="card about">
-            <div class="icon">
-                <img src="assets/metas.svg" alt="About us.">
-            </div>
-            <h3>Acompanhe suas metas</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        </section>
-    </main>
+      <div class="main-card-2">
+        <img src="assets/home.jpeg" alt="Controle suas despesas">
+      </div>
+  </div>
+
+  <main class="cards">
+      <section class="card contact">
+          <div class="icon">
+              <img src="assets/despesas.svg" alt="Controle suas despesas">   
+          </div>
+          <h3>Controle suas despesas</h3>
+          <span>Gerencie com precisão todas as despesas dos seus cartões de crédito. 
+          Tenha controle do cartão titular e dos adicionais.</span>
+      </section>
+      <section class="card shop">
+          <div class="icon">
+              <img src="assets/tarefas.svg" alt="Shop here.">
+          </div>
+          <h3>Gerencia suas tarefas diárias</h3>
+          <span> Faça a gestão de tarefas da forma mais eficiente para a sua rotina.
+          Acompanhe as datas em cada demanda e priorize o que realmente importa.</span>
+      </section>
+      <section class="card about">
+          <div class="icon">
+              <img src="assets/metas.svg" alt="About us.">
+          </div>
+          <h3>Acompanhe suas metas</h3>
+          <span>Crie metas e acompanhe sua evolução. Gerencie seus objetivos financeiros de curto,
+          médio e longo prazo. Fique cada vez mais perto de alcançar seus sonhos e objetivos.</span>
+      </section>
+  </main>
+</div>
 <!--Content before waves-->
 
 <!--Waves Container-->
-<div>
-<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(10,82,45,0.7)" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(10,82,45,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(10,82,45,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(10,82,45,0.3)" />
-</g>
-</svg>
-</div>
-</div>
+  <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(10,82,45,0.7)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(10,82,45,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(10,82,45,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(10,82,45,0.3)" />
+          </g>
+      </svg>
+  </div>
+
+

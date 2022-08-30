@@ -1,22 +1,40 @@
 .card-category {
-    background-size: cover;
-    background-position: center;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #0A522D;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0A522D;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.main-card-1 {
+  background-color: #EBEBEB;
+  border-radius: 5%;
+}
+.main-card-2 {
+  width: 300px;
+  
+  img {
+    width: 100%;
+    border-radius: 5%;
   }
+}
   
 main.cards {
     display: flex;
     padding: 32px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -29,7 +47,7 @@ main.cards section.card {
     background: #ffff;
     padding: 1rem 1.5rem;
     border-radius: 12px;
-    max-height: 468px;
+    height: 300px;
     margin-left: 32px;
 }
 
@@ -56,21 +74,9 @@ main.cards section.card h3 {
 main.cards section.card span {
     font-weight: 300;
     max-width: 240px;
-    font-size: 80%;
+    font-size: 95%;
     margin-bottom: 8px;
     color: #0A522D;
-}
-
-main.cards section.card button {
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border-radius: 32px;
-    border: 0;
-    cursor: pointer;
-    font-size: 80%;
-    font-weight: 500;
-    color: #0A522D;
-    margin-bottom: 16px 0;
 }
 
 main.cards section.card.contact {
@@ -96,9 +102,4 @@ main.cards section.card.about {
     main.cards section.card:last-child {
         margin-bottom: 0;
     }
-
-    main.cards section.card button {
-        font-size: 70%;
-    }
-
 }
