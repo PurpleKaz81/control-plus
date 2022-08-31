@@ -11,11 +11,14 @@
 @import "button";
 @import "login";
 
+
 body {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-shadow: 0.1;
 }
 
 h1 {

@@ -1,14 +1,14 @@
 <%= simple_form_for(@task) do |f| %>
   <div class="form-inputs">
-    <%= f.input :content, placeholder: "Descreva sua tarefa" %>
+    <%= f.input :content, placeholder: "Descreva sua tarefa", label: false %>
     <%= f.input :date, placeholder: "Digite aqui a data de sua tarefa" %>
-    
-    <div class="col-4">
-      <%= f.input :order, placeholder: "Defina a prioridade" %>
-    </div>
+
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-form" %>
+    <div class="col-4">
+      <%= f.input :order, placeholder: "Defina a prioridade" %>
+    </div>
+    <%= f.button :submit, class: "btn btn1" %>
   </div>
 <% end %>

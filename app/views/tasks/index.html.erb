@@ -23,10 +23,10 @@
         <p class="m-0"><%= task.content %></p>
         <div class="d-flex">
           <%= link_to edit_task_path(task), class: "text-success mx-2" do %>
-            <i class="fas fa-edit"></i>
+            <i class="fas fa-edit" id="logo-edit"></i>
           <% end %>
           <%= link_to task_path(task), class: "text-danger mx-2", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash-alt" id="logo-trash"></i>
           <% end %>
         </div>
 
@@ -35,9 +35,8 @@
 
 
 
-
     <div class="d-flex justify-content-center">
-      <%= link_to "Nova tarefa", new_task_path, class: "btn mt-3 mb-3 btn-form" %>
+      <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mt-3 mb-3" %>
     </div>
 
   </div>
