@@ -5,33 +5,52 @@
 
 <h1><strong>Suas Finanças</strong></h1>
 
-<h2><strong>Saídas</strong></h2>
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Data</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Valor (R$)</th>
-    </tr>
-  </thead>
-  <% @outflows.each_with_index do |outflow, index| %>
-    <tbody>
+<div class="container">
+  <h2><strong>Saídas</strong></h2>
+  <table class="table table-striped table-hover">
+    <thead class="thead">
       <tr>
-        <th scope="row"><%= index %></th>
-        <td><%= outflow.date %></td>
-        <td><%= outflow.description %></td>
-        <td><%= outflow.value %></td>
-        <td><%= link_to edit_finance_path(outflow), class: "text-success mx-2" do %>
-            <i class="fas fa-edit" id="logo-edit"></i>
-          <% end %></td>
-        <td><%= link_to finance_path(outflow), class: "text-danger mx-2", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
-            <i class="fas fa-trash-alt" id="logo-trash"></i>
-          <% end %></td>
+        <th scope="col"></th>
+        <th scope="col">Data</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Valor (R$)</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
       </tr>
-    </tbody>
-  <% end %>
+    </thead>
+    <% @outflows.each_with_index do |outflow, index| %>
+      <tbody>
+        <tr>
+          <th scope="row"><%= index %></th>
+          <td><%= outflow.date %></td>
+          <td><%= outflow.description %></td>
+          <td><%= outflow.value %></td>
+          <td><%= link_to edit_finance_path(outflow), class: "text-success mx-2" do %>
+              <i class="fas fa-edit" id="logo-edit"></i>
+            <% end %></td>
+          <td><%= link_to finance_path(outflow), class: "text-danger mx-2", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
+              <i class="fas fa-trash-alt" id="logo-trash"></i>
+            <% end %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
 
-</table>
+  <div class="totals mb-2">
+    <p>Total de Saídas</p>
+    <div class="row col-4">
+      <div class="card-body">
+        <p>R$ <%= @outflow_sum %></p>
+      </div>
+    </div>
 
-<%= link_to "Criar Nova Saída", new_finance_path, class: "btn btn-primary col-2" %>
+    <p class="mt-2 mb-2">Seu Total</p>
+    <div class="row col-4 mt-2">
+      <div class="card-body">
+        <p>R$ <%= @total %></p>
+      </div>
+    </div>
+
+    <%= link_to "Criar Nova Saída", new_finance_path, class: "btn btn1 col-2 mt-3" %>
+  </div>
+</div>

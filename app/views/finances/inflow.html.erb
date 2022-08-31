@@ -40,18 +40,14 @@
     <p>Total de Entradas</p>
     <div class="row col-4">
       <div class="card-body">
-        <% sum = 0 %>
-        <% @inflows.each do |inflow| %>
-            <% sum = sum + inflow.value %>
-          <% end %>
-        <p>R$ <%= sum %></p>
+        <p>R$ <%= @inflow_sum %></p>
       </div>
     </div>
 
     <p class="mt-2 mb-2">Seu Total</p>
     <div class="row col-4 mt-2">
       <div class="card-body">
-        <p>R$ <%= sum %></p>
+        <p>R$ <%= @total %></p>
       </div>
     </div>
 
