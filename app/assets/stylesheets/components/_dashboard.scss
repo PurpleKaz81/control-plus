@@ -1,0 +1,26 @@
+#image-task {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(home.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#image-finance {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(finances1.jpg);
+  background-size: cover; 
+  height: 100vh;
+}
+
+.dashboard-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px
+
+}
+
+.dashboard-button-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
