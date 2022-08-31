@@ -5,6 +5,7 @@
   justify-content: space-between;
   color: #0A522D;
   border-bottom: 1px solid #F3F3F3;
+  padding: 15px 30px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -31,24 +32,35 @@
   align-items: center;
   justify-content: center;
   
-  a {
-    text-decoration: none;
-    color: #0A522D;
-    font-size: 1.0rem;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  a:hover {
-    color: #69947e;
-  }
-
   i {
     color: #0A522D;
     font-size: 1.5rem;
   }
 
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0A522D;
+  font-size: 1.0rem;
+  margin-left: 10px;
+  margin-right: 10px;
+
   i:hover {
     color: #69947e;
   }
+
+  &:hover {
+    color: #69947e;
+  }
 }
+
+.menu-font {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+

@@ -1,17 +1,13 @@
 #image-task {
-  background-image: url(home.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(home.jpg);
   background-size: cover;
   height: 100vh;
-  filter: brightness(0.8);
 }
 
-
-
 #image-finance {
-  background-image: url(finances1.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(finances1.jpg);
   background-size: cover; 
   height: 100vh;
-  filter: brightness(0.8);
 }
 
 .dashboard-button {
