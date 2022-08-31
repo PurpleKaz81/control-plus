@@ -21,7 +21,7 @@
     <% @outflows.each_with_index do |outflow, index| %>
       <tbody>
         <tr>
-          <th scope="row"><%= index %></th>
+          <th scope="row"><%= index + 1 %></th>
           <td><%= outflow.date %></td>
           <td><%= outflow.description %></td>
           <td><%= outflow.value %></td>
