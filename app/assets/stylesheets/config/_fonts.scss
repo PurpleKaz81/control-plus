@@ -1,10 +1,12 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800;900&family=Qwitcher+Grypen&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
+$font-family: 'Inter', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -15,3 +17,7 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+h1 {
+  font-family: "Inter";
+}
