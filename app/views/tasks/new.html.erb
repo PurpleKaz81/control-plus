@@ -2,21 +2,13 @@
     <i class="fa-solid fa-arrow-left-long"></i>
   <% end %>
 
-<div class="container mt-5">
+<div class="container mt-1">
   <div class="form-container w-50 m-auto">
 
 
-    <h3><strong>Hoje, <%= Date.today %></strong></h3>
+    <h3><strong>Crie sua tarefa</strong></h3>
     <%= render "form", task: @task %>
 
 
   </div>
 </div>
-
-
-<%#
-  <%= link_to edit_task_path(task), class: "text-success mx-2" do %>
-    <%# <i class="fa-solid fa-arrow-left-long"></i>
-  <% end %>
-
-<%# <%= link_to "Voltar as tarefas", tasks_path %>

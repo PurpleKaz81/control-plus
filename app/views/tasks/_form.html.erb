@@ -5,8 +5,10 @@
     </div>
     <div class="col-6">
     <%= f.input :order, label:"Ordem de prioridade",placeholder: "Defina sua prioridade" %>
+    <%= f.input :date, label:"Marque a data", as: :string, input_html: { type: "date" } %>
     </div>
-    <%= f.input :date, label:"Marque a data" %>
+
+
   </div>
 
   <div class="form-actions mt-4">
