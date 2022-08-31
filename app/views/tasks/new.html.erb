@@ -1,12 +1,36 @@
-<div class="row justify-content-center w-100">
-  <div class="col-6 mt-3">
-    <h1><strong>Adicione uma nova tarefa</strong></h1>
-      <%= render "form", task: @task %>
+  <div class="row justify-content-center w-100">
+    <div class="col-6 mt-3">
 
-    <div>
-      <%= link_to "Voltar as tarefas", tasks_path, class: "btn btn2 mt-3 mb-3" %>
-   </div>
+      <div class="card-new-task">
+        <h1><strong>Hoje, <%= Date.today %></strong></h1>
+          <%= render "form", task: @task %>
+
+        <div class="form-action">
+          <%= link_to "Voltar as tarefas", tasks_path, class: "btn btn2 mt-3 mb-3" %>
+        </div>
+      </div>
 
 
+    </div>
   </div>
+
+<div class="container col-6">
+
+
+  <div class="main-grid d-flex justify-content-center mt-5">
+      <div class="main-card-3">
+          <h2> Lorem ipsum dolor sit amet. In internos odit nam perspiciatis.</h2>
+          <p> Qui consequatur quia eum suscipit consequatur qui commodi eaque
+          ut quas dolor ut obcaecati accusantium aut animi corrupti ad laborum iste.</p>
+
+        <div>
+          <i class="fa-solid fa-calendar-days" id="logo-calendar"></i>
+
+          <%= link_to "Cancelar", tasks_path, class: "btn btn2 mt-3 mb-3" %>
+          <%# <%= link_to "Salvar", tasks_path, class: "btn btn1 mt-3 mb-3" %>
+        <%# </div>
+
+      </div>
+  </div>
+
 </div>
