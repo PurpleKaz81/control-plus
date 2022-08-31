@@ -3,6 +3,14 @@ class FinancesController < ApplicationController
     @finances = Finance.all
   end
 
+  def inflow
+    @inflows = Finance.where(category: 'inflow')
+  end
+
+  def outflow
+    @outflows = Finance.where(category: 'outflow')
+  end
+
   def new
     @finance = Finance.new
   end
