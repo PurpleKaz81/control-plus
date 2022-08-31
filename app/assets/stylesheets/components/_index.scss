@@ -10,17 +10,17 @@
 @import "header";
 @import "button";
 @import "login";
+@import "form";
 
 
 body {
-
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    text-shadow: 0.1;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-shadow: 0.1;
 }
 
-h1 {
+h1, h3 {
   color: $dark-green;
 }
