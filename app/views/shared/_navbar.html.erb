@@ -2,25 +2,24 @@
     <a class="navbar-brand" href="">
       <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
     </a>
-    <div>
-      <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link link" %>
-          <li class="nav-item active">
-            <%= link_to "Finanças", root_path, class: "nav-link link" %>
-          <li class="nav-item active">
-            <%= link_to "Tarefas", root_path, class: "nav-link link" %>
-          </li>
-          <%= link_to "Log Out", destroy_user_session_path, class: "nav-link link", data: {turbo_method: :delete} %>
+
+          <div class="navbar-sign-in">
+            <a href="#"> <i class="fa-solid fa-house"></i> Home</a>
+            <a href="#"> <i class="fa-solid fa-list-check"></i> Tarefas </a>
+            <a href="#"> <i class="fa-solid fa-brazilian-real-sign"></i> Finanças </a>
+            <a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair </a>
+          </div>
+
+            <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete} %>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Entrar", new_user_session_path, class: "nav-link btn2" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Cadastre-se", new_user_registration_path, class: "nav-link btn btn1" %>
-          </li>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <%= link_to "Entrar", new_user_session_path, class: "nav-link btn2" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Cadastre-se", new_user_registration_path, class: "nav-link btn btn1" %>
+            </li>
+          </ul>
         <% end %>
-      </ul>
-    </div>
 </div>
