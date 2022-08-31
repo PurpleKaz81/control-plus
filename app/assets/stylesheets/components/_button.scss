@@ -36,7 +36,19 @@
     width: 140px;
 }
 
-.btn-form{
+.btn-form {
   background-color: #0A522D;
   color: #fff;
+}
+
+.text-icon {
+  color: $dark-green;
+}
+
+i {
+  font-size: 40px;
+}
+
+i:hover {
+  color: #69947E;
 }
