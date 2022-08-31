@@ -1,3 +1,3 @@
 class DashboardsController < ApplicationController
-  def index; end
+  def index; end # será um def index ou def dashboard?
 end
