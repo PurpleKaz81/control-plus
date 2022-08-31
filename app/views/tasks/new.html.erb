@@ -1,10 +1,12 @@
 <%= link_to "Voltar as tarefas", tasks_path %>
 
-<div class="row justify-content-center w-100">
-  <div class="col-6 mt-3">
+<div class="container mt-5">
+  <div class="form-container w-50 m-auto">
+
 
     <h3><strong>Hoje, <%= Date.today %></strong></h3>
     <%= render "form", task: @task %>
+
 
   </div>
 </div>
