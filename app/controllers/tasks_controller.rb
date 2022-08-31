@@ -1,11 +1,10 @@
 class TasksController < ApplicationController
   def index
-    if params[:query].present?
-      @tasks = Task.where(content: params[:query])
-    else
-      @tasks = Task.all
-    end
-
+    @tasks = if params[:query].present?
+               Task.where(content: params[:query])
+             else
+               Task.all
+             end
   end
 
   def new
