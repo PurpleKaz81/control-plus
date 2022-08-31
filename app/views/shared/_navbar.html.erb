@@ -13,21 +13,21 @@
             <%= link_to finances_path, class: "nav-menu" do %>
                <i class="fa-solid fa-brazilian-real-sign"><span class="menu-font"> Finanças</span></i>
             <% end %>
-            
 
-            
+
+
             <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu" do %>
               <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font"> Sair</span></i>
             <% end %>
           </div>
-            
+
             <div class="nav-item dropdown">
               <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="/users">Perfil</a>
               </div>
             </div>
-          
+
         <% else %>
           <ul class="navbar-nav">
             <li class="nav-item">
