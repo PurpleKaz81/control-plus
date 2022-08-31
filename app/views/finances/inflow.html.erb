@@ -3,7 +3,7 @@
 
 <h1><strong>Suas Finanças</strong></h1>
 
-<h2><strong>Entradas</strong></h2>
+<h2><strong>Saídas</strong></h2>
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -12,16 +12,17 @@
       <th scope="col">Valor (R$)</th>
     </tr>
   </thead>
-  <% @inflows.each_with_index do |inflow, index| %>
+  <% @outflows.each_with_index do |outflow, index| %>
     <tbody>
       <tr>
         <th scope="row"><%= index %></th>
-        <td><%= inflow.date %></td>
-        <td><%= inflow.description %></td>
-        <td><%= inflow.value %></td>
-        <%= link_to "Editar", edit_finance_path(inflow), class: "btn btn-primary" %>
-        <%= link_to "Deletar", finance_path(inflow), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this product?" } %>
+        <td><%= outflow.date %></td>
+        <td><%= outflow.description %></td>
+        <td><%= outflow.value %></td>
+        <%= link_to "Editar", edit_finance_path(outflow), class: "btn btn-primary" %>
+        <%= link_to "Deletar", finance_path(outflow), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this product?" } %>
       </tr>
     </tbody>
   <% end %>
+
 </table>
