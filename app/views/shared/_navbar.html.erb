@@ -14,7 +14,7 @@
           <li class="nav-item active">
             <%= link_to "Tarefas", root_path, class: "nav-link link" %>
           </li>
-          <%= link_to "Log out", destroy_user_session_path, class: "nav-link link", data: {turbo_method: :delete} %>
+          <%= link_to "Log Out", destroy_user_session_path, class: "nav-link link", data: {turbo_method: :delete} %>
         <% else %>
           <li class="nav-item">
             <%= link_to "Entrar", new_user_session_path, class: "nav-link btn2" %>
@@ -35,4 +35,4 @@
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> %>
 
-                  <%# <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %> 
+                  <%# <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
