@@ -45,6 +45,141 @@ entrada3 = Finance.new(
 )
 entrada3.save!
 
+entrada4 = Finance.new(
+  date: '22/01/2022',
+  description: 'Boteco do Toninho',
+  value: rand(1..99),
+  user:,
+  category: 'Entrada'
+)
+entrada4.save!
+
+entrada5 = Finance.new(
+  date: '04/03/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(500..999),
+  user:,
+  category: 'Entrada'
+)
+entrada5.save!
+
+entrada6 = Finance.new(
+  date: '05/04/2022',
+  description: 'Suborno por cigarro, cela 23B',
+  value: rand(1..75),
+  user:,
+  category: 'Entrada'
+)
+entrada6.save!
+
+entrada1 = Finance.new(
+  date: '22/01/2022',
+  description: 'Boteco do Toninho',
+  value: rand(1..99),
+  user:,
+  category: 'Entrada'
+)
+entrada1.save!
+
+entrada2 = Finance.new(
+  date: '04/03/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(500..999),
+  user:,
+  category: 'Entrada'
+)
+entrada2.save!
+
+entrada3 = Finance.new(
+  date: '05/04/2022',
+  description: 'Suborno por cigarro, cela 23B',
+  value: rand(1..75),
+  user:,
+  category: 'Entrada'
+)
+entrada3.save!
+
+entrada1 = Finance.new(
+  date: '22/01/2022',
+  description: 'Boteco do Toninho',
+  value: rand(1..99),
+  user:,
+  category: 'Entrada'
+)
+entrada1.save!
+
+entrada2 = Finance.new(
+  date: '04/03/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(500..999),
+  user:,
+  category: 'Entrada'
+)
+entrada2.save!
+
+entrada3 = Finance.new(
+  date: '05/04/2022',
+  description: 'Suborno por cigarro, cela 23B',
+  value: rand(1..75),
+  user:,
+  category: 'Entrada'
+)
+entrada3.save!
+
+entrada1 = Finance.new(
+  date: '22/01/2022',
+  description: 'Boteco do Toninho',
+  value: rand(1..99),
+  user:,
+  category: 'Entrada'
+)
+entrada1.save!
+
+entrada2 = Finance.new(
+  date: '04/03/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(500..999),
+  user:,
+  category: 'Entrada'
+)
+entrada2.save!
+
+entrada3 = Finance.new(
+  date: '05/04/2022',
+  description: 'Suborno por cigarro, cela 23B',
+  value: rand(1..75),
+  user:,
+  category: 'Entrada'
+)
+entrada3.save!
+
+entrada1 = Finance.new(
+  date: '22/01/2022',
+  description: 'Boteco do Toninho',
+  value: rand(1..99),
+  user:,
+  category: 'Entrada'
+)
+entrada1.save!
+
+entrada2 = Finance.new(
+  date: '04/03/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(500..999),
+  user:,
+  category: 'Entrada'
+)
+entrada2.save!
+
+entrada3 = Finance.new(
+  date: '05/04/2022',
+  description: 'Suborno por cigarro, cela 23B',
+  value: rand(1..75),
+  user:,
+  category: 'Entrada'
+)
+entrada3.save!
+
 puts 'Generating three outflows'
 
 saida1 = Finance.new(

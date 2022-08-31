@@ -158,3 +158,17 @@ main.cards section.card.about {
   box-shadow: 20px 20px 20px -30px #020202;
 
 }
+
+.card-body {
+  // padding: 1rem;
+  border: 1px solid #0A522D;
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
