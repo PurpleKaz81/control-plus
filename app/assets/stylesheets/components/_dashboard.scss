@@ -1,20 +1,30 @@
-.dashboard-grid {
-    display: grid;
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 60px;
-    justify-content: center;
-  }
-  
-  .dashboard-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#image-task {
+  background-image: url(home.jpg);
+  background-size: cover;
+  height: 100vh;
+  filter: brightness(0.8);
+}
 
-    img {
-        width: 100%;
-        height: 100%;
-    }
+
+
+#image-finance {
+  background-image: url(finances1.jpg);
+  background-size: cover; 
+  height: 100vh;
+  filter: brightness(0.8);
+}
+
+.dashboard-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px
+
+}
+
+.dashboard-button-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   
