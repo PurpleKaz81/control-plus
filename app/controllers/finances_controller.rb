@@ -1,14 +1,18 @@
 class FinancesController < ApplicationController
   def index
-    @finances = Finance.all
+    @finances = current_user.finances
   end
 
   def inflow
-    @inflows = Finance.where(category: 'Entrada')
+    @inflows = current_user.finances.where(category: 'Entrada')
+    @inflow_sum = @inflows.sum(:value)
+    @total = total
   end
 
   def outflow
-    @outflows = Finance.where(category: 'Saída')
+    @outflows = current_user.finances.where(category: 'Saída')
+    @outflow_sum = @outflows.sum(:value)
+    @total = total
   end
 
   def new
@@ -56,5 +60,11 @@ class FinancesController < ApplicationController
 
   def strong_params
     params.require(:finance).permit(:category, :description, :value, :date)
+  end
+
+  def total
+    inflow_sum = current_user.finances.where(category: 'Entrada').sum(:value)
+    outflow_sum = current_user.finances.where(category: 'Saída').sum(:value)
+    inflow_sum - outflow_sum
   end
 end

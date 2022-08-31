@@ -156,3 +156,17 @@ main.cards section.card.about {
   border-radius: 1rem;
   margin-bottom: 15px;
 }
+
+.card-body {
+  // padding: 1rem;
+  border: 1px solid #0A522D;
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+}
