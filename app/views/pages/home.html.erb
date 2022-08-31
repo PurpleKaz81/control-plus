@@ -3,10 +3,13 @@ of Simple CSS Waves-->
 <div class="container">
   <div class="main-grid">
       <div class="main-card-1">
-          <h2> Lorem ipsum dolor sit amet. In internos odit nam perspiciatis.</h2>
-          <p> Qui consequatur quia eum suscipit consequatur qui commodi eaque 
-          ut quas dolor ut obcaecati accusantium aut animi corrupti ad laborum iste.</p>
-        <%= link_to "Cadastre-se", new_user_registration_path, class: "nav-link btn1" %>   
+        <h2> Controle suas despesas e gerencia suas tarefas diárias</h2>
+        <p>Faça a gestão de tarefas da forma mais eficiente para a sua rotina.
+        Gerencie com precisão todas as despesas dos seus cartões de crédito, contas de bancos, etc... </p>
+        <h3> Tenha o controle total da sua vida! </h3>
+        <div>
+        <%= link_to "Cadastre-se", new_user_registration_path, class: "btn btn1 col-sm-3 col-xs-12" %> 
+        </div>
       </div>
 
       <div class="main-card-2">
@@ -17,15 +20,29 @@ of Simple CSS Waves-->
   <main class="cards">
       <section class="card contact">
           <div class="icon">
-              <img src="assets/despesas.svg" alt="Controle suas despesas">   
+              <%# <img src="assets/despesas.svg" alt="Controle suas despesas">    %>
+            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/smauprql.json"
+                trigger="hover"
+                colors="primary:#0a522d"
+                style="width:75px;height:75px">
+            </lord-icon>
           </div>
           <h3>Controle suas despesas</h3>
-          <span>Gerencie com precisão todas as despesas dos seus cartões de crédito. 
-          Tenha controle do cartão titular e dos adicionais.</span>
+          <span>Gerencie com precisão todas as despesas dos seus cartões de crédito, contas de bancos, etc... 
+          Tenha o controle total da sua vida financeira.</span>
       </section>
       <section class="card shop">
           <div class="icon">
-              <img src="assets/tarefas.svg" alt="Shop here.">
+              <%# <img src="assets/tarefas.svg" alt="Shop here."> %>
+              <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/aslgozpd.json"
+                trigger="hover"
+                colors="primary:#0a522d"
+                style="width:75px;height:75px">
+            </lord-icon>
           </div>
           <h3>Gerencia suas tarefas diárias</h3>
           <span> Faça a gestão de tarefas da forma mais eficiente para a sua rotina.
@@ -33,11 +50,19 @@ of Simple CSS Waves-->
       </section>
       <section class="card about">
           <div class="icon">
-              <img src="assets/metas.svg" alt="About us.">
+              <%# <img src="assets/metas.svg" alt="About us."> %>
+            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/spkantfu.json"
+                trigger="hover"
+                colors="primary:#0a522d"
+                style="width:75px;height:75px">
+            </lord-icon>
           </div>
           <h3>Acompanhe suas metas</h3>
           <span>Crie metas e acompanhe sua evolução. Gerencie seus objetivos financeiros de curto,
-          médio e longo prazo. Fique cada vez mais perto de alcançar seus sonhos e objetivos.</span>
+          médio e longo prazo. Fique cada vez mais perto de alcançar seus sonhos e objetivos.
+          </span>
       </section>
   </main>
 </div>

@@ -1,0 +1,33 @@
+.form-container{
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 20px 20px 50px -30px #020202;
+
+    img {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.links {
+    justify-content: center;
+    text-align: center;
+}
