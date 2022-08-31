@@ -1,9 +1,14 @@
-<h1>Seu Perfil</h1>
-<%= link_to :back, class: "text-icon mx-2" do %>
-    <i class="fa-solid fa-arrow-left-long"></i>
-<% end %>
+<%#= link_to :back, class: "text-icon mx-2" do %>
+    <%# <i class="fa-solid fa-arrow-left-long"></i> %>
+<%# <% end %>
 <div class="nav-item dropdown">
   <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
   </div>
 </div>
+<h1>Seu Perfil</h1>
+  <%= @user.first_name %>
+  <%= @user.last_name %>
+  <%= @user.phone_number %>
+  <%= @user.email %>
+  <%= @user.password %>
