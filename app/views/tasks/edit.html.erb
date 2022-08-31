@@ -1,10 +1,10 @@
- <%= link_to "Voltar as tarefas", edit_task_path %>
+<%= link_to "Voltar as tarefas", edit_task_path %>
 
-<div class="row justify-content-center w-100">
-  <div class="col-6 mt-3">
+<div class="container mt-5">
+  <div class="form-container w-50 m-auto">
+
     <h3><strong>Edite sua tarefa</strong></h3>
     <%= render "form", task: @task %>
-
 
   </div>
 </div>
