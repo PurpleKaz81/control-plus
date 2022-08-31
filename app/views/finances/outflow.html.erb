@@ -1,9 +1,11 @@
-<%#= link_to "Back", :back, class: "btn btn-primary" %>
-<%#= link_to "Entradas", inflow_finances_path, class: "btn btn-primary" %>
+<%= link_to finances_path, class: "text-icon mx-2" do %>
+    <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+<%= link_to "Entradas", inflow_finances_path, class: "btn btn-primary col-2" %>
 
 <h1><strong>Suas Finanças</strong></h1>
 
-<h2><strong>Entradas</strong></h2>
+<h2><strong>Saídas</strong></h2>
 <table class="table table-striped table-hover">
   <thead>
     <tr>

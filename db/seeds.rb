@@ -18,31 +18,60 @@ user.save
 
 puts 'Generating three inflows'
 
-inflow1 = Finance.new(
+entrada1 = Finance.new(
   date: '22/01/2022',
-  description: 'Casa de repousa da minha mãe',
+  description: 'Boteco do Toninho',
   value: rand(1..99),
   user:,
-  category: 'inflow'
+  category: 'Entrada'
 )
-inflow1.save!
+entrada1.save!
 
-inflow2 = Finance.new(
+entrada2 = Finance.new(
   date: '04/03/2022',
   description: 'Arroucho do Partidão',
   value: rand(500..999),
   user:,
-  category: 'inflow'
+  category: 'Entrada'
 )
-inflow2.save!
+entrada2.save!
 
-inflow3 = Finance.new(
+entrada3 = Finance.new(
   date: '05/04/2022',
-  description: 'Subonro por cigarro, cela 23B',
+  description: 'Suborno por cigarro, cela 23B',
   value: rand(1..75),
   user:,
-  category: 'inflow'
+  category: 'Entrada'
 )
-inflow3.save!
+entrada3.save!
+
+puts 'Generating three outflows'
+
+saida1 = Finance.new(
+  date: '22/01/2022',
+  description: 'Casa de repousa da minha mãe',
+  value: rand(1..99),
+  user:,
+  category: 'Saída'
+)
+saida1.save!
+
+saida2 = Finance.new(
+  date: '04/03/2022',
+  description: 'BK, pq tô aventureiro',
+  value: rand(500..999),
+  user:,
+  category: 'Saída'
+)
+saida2.save!
+
+saida3 = Finance.new(
+  date: '05/04/2022',
+  description: 'Não lembro, tava lôko',
+  value: rand(1..75),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
 
 puts 'Finished!'

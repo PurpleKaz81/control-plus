@@ -3,14 +3,14 @@
     <%= f.input :date, label: 'Data', placeholder: "Marque a Data da Entrada/Saída?" %>
     <%= f.input :description, label: 'Descrição', placeholder: "Descreva sua Entrada/Saída" %>
     <div class="col-6">
-      <%= f.input :category, label: 'Categoria', placeholder: "Descreva sua Categoria" %>
+      <%= f.input :category, collection: %w[Entrada Saída], label: 'Categoria', placeholder: "Descreva sua Categoria" %>
     </div>
     <div class="col-6">
       <%= f.input :value, label: 'Valor (R$)', placeholder: "Qual o Valor de sua Entrada/Saída?" %>
     </div>
   </div>
   <div class="form-actions mt-4">
-    <%= link_to 'Cancelar', tasks_path, class: "btn btn2" %>
+    <%= link_to 'Cancelar', @finance.category == 'inflow' ? inflow_finances_path : outflow_finances_path, class: "btn btn2" %>
     <%= f.button :submit, "Salvar", class: "btn btn1" %>
   </div>
 <% end %>
