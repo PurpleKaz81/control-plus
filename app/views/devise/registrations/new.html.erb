@@ -3,7 +3,7 @@
     <section class="col-12 col-sm-6 mt-5">
       <div class="form-container">
         <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
-          <h3 class="d-flex">Cadastre-se gratuitamente</h3>
+          <h3 class="d-flex">Cadastre-se Gratuitamente</h3>
 
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
               <%= f.error_notification %>
@@ -15,8 +15,9 @@
                 <%= f.input :last_name, label: "Sobrenome", placeholder: 'Digite seu sobrenome',
                             required: true %>
                 <%= f.input :phone_number, label: "Telefone", placeholder: 'Digite seu telefone',
-                            required: true %>
-                <%= f.input :email, label: "E-mail", placeholder: 'Digite seu E-mail',
+                            required: true,
+                            autofocus: true %>
+                <%= f.input :email, label: "E-mail", placeholder: 'Digite seu e-mail',
                             required: true,
                             input_html: { autocomplete: "email" } %>
                 <%= f.input :photo, label: "Foto",
