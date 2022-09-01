@@ -4,23 +4,21 @@
     <h1 class="text-center"><strong>Tarefas</strong></h1>
 
     <div class="d-flex justify-content-center row w-100">
-      <%= form_with url: tasks_path, method: :get, class: "d-flex col-6 mb-4" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control" %>
-      <%= submit_tag "Search", class: "btn btn-form" %>
+      <%= form_with url: tasks_path, method: :get, class: "search-bar d-flex col-6 mb-4" do %>
+        <%= text_field_tag :search,
+          params[:search],
+          class: "form-control",
+          type: "search",
+          name: "search",
+          required: true %>
+        <%= button_tag type: :submit, class: "search-btn" do %>
+          <span>Search</span>
+        <% end %>
       <% end %>
-
     </div>
+
   </div>
 </div>
-
-<form action="" class="search-bar">
-	<input type="search" name="search" pattern=".*\S.*" required>
-	<button class="search-btn" type="submit">
-		<span>Search</span>
-	</button>
-</form>
 
 
 <div class="container">
