@@ -1,12 +1,14 @@
 <%= simple_form_for(@finance) do |f| %>
   <div class="form-inputs row">
-    <%= f.input :date, label: 'Data', placeholder: "Marque a Data da Entrada/Saída?" %>
     <%= f.input :description, label: 'Descrição', placeholder: "Descreva sua Entrada/Saída" %>
+  <div class="col-6">
+    <%= f.input :date, label: 'Data', placeholder: "Selecione a Data", as: :string, input_html: { type: "date" } %>
+  </div>
     <div class="col-6">
-      <%= f.input :category, collection: %w[Entrada Saída], label: 'Categoria', placeholder: "Descreva sua Categoria" %>
+      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria', placeholder: "Descreva sua Categoria" %>
     </div>
     <div class="col-6">
-      <%= f.input :value, label: 'Valor (R$)', placeholder: "Qual o Valor de sua Entrada/Saída?" %>
+      <%= f.input :value, label: 'Valor (R$)', placeholder: "Digite o Valor" %>
     </div>
   </div>
   <div class="form-actions mt-4">

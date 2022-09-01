@@ -34,10 +34,10 @@
     <% @tasks.each do |task| %>
       <tbody>
         <tr>
-          <th scope="row"></th>
-          <td><%= task.order %></td>
-          <td><%= task.content %></td>
-
+          <th scope="col"></th>
+          <th scope="col">Ordem</th>
+          <th scope="col">Data</th>
+          <th scope="col">Conteúdo</th>
           <td><%= link_to edit_task_path(task), class: "text-success" do %>
             <i class="fas fa-edit" id="logo-edit"></i>
           <% end %></td>
@@ -45,11 +45,35 @@
             <i class="fas fa-trash-alt" id="logo-trash"></i>
           <% end %></td>
         </tr>
-      </tbody>
-    <% end %>
-  </table>
-</div>
+      </thead>
+      <% @tasks.each do |task| %>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td><%= task.order %></td>
+            <td><%= task.date.strftime "%d/%m/%Y" %></td>
+            <td><%= task.content %></td>
 
-<div class="d-flex justify-content-center">
-  <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mt-3 mb-3" %>
+            <td><%= link_to edit_task_path(task), class: "text-success" do %>
+              <i class="fas fa-edit" id="logo-edit"></i>
+            <% end %></td>
+            <td><%= link_to task_path(task), class: "text-danger", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
+              <i class="fas fa-trash-alt" id="logo-trash"></i>
+            <% end %></td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mt-3 mb-3" %>
+  </div>
+
+<div class="container">
+  <div id="items">
+        <% @tasks.each do |task| %>
+        <div class="list-group-item"><%= task.order %> <%= task.date.strftime "%d/%m/%y"%> <%= task.content %></div>
+        <% end %>
+  </div>
 </div>
