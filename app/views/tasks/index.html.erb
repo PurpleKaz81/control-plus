@@ -47,3 +47,11 @@
   <div class="d-flex justify-content-center">
     <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mt-3 mb-3" %>
   </div>
+
+<div class="container">
+  <div id="items">
+        <% @tasks.each do |task| %>
+        <div class="list-group-item"><%= task.order %> <%= task.date.strftime "%d/%m/%y"%> <%= task.content %></div>
+        <% end %>
+  </div>
+</div>
