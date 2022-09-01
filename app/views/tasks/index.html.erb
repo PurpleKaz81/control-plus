@@ -3,6 +3,16 @@
   <div class="col-12 col-md-6 mt-4">
     <h1 class="text-center"><strong>Tarefas</strong></h1>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+    integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+    <div class="search-box">
+      <input type="text" class="search-text" placeholder="Pesquise">
+      <a class="link-search" href="#" class="search-btn">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </a>
+    </div>
+
+
     <div class="d-flex justify-content-center row w-100">
       <%= form_with url: tasks_path, method: :get, class: "d-flex col-6 mb-4" do %>
       <%= text_field_tag :query,
