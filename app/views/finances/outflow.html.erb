@@ -1,11 +1,8 @@
-<%= link_to finances_path, class: "text-icon mx-2" do %>
-    <i class="fa-solid fa-arrow-left-long"></i>
-<% end %>
 <%= link_to "Entradas", inflow_finances_path, class: "btn btn-primary col-2" %>
 
-<h1><strong>Suas Finanças</strong></h1>
 
 <div class="container">
+  <h1><strong>Suas Finanças</strong></h1>
   <h2><strong>Saídas</strong></h2>
   <table class="table table-striped table-hover">
     <thead class="thead">
@@ -51,6 +48,6 @@
       </div>
     </div>
 
-    <%= link_to "Criar Nova Saída", new_finance_path, class: "btn btn1 col-2 mt-3" %>
+    <%= link_to "Nova Saída", new_finance_path, class: "btn btn1 col-2 mt-3" %>
   </div>
 </div>
