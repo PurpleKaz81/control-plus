@@ -23,27 +23,16 @@
 
 <div class="container">
   <table class="table table-striped table-hover">
-    <thead class="thead mx-5">
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Ordem</th>
-        <th scope="col">Conteúdo</th>
 
-      </tr>
-    </thead>
-    <% @tasks.each do |task| %>
+
       <tbody>
         <tr>
           <th scope="col"></th>
           <th scope="col">Ordem</th>
           <th scope="col">Data</th>
           <th scope="col">Conteúdo</th>
-          <td><%= link_to edit_task_path(task), class: "text-success" do %>
-            <i class="fas fa-edit" id="logo-edit"></i>
-          <% end %></td>
-          <td><%= link_to task_path(task), class: "text-danger", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
-            <i class="fas fa-trash-alt" id="logo-trash"></i>
-          <% end %></td>
+          <th scope="col"></th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <% @tasks.each do |task| %>
@@ -53,7 +42,6 @@
             <td><%= task.order %></td>
             <td><%= task.date.strftime "%d/%m/%Y" %></td>
             <td><%= task.content %></td>
-
             <td><%= link_to edit_task_path(task), class: "text-success" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %></td>
