@@ -11,7 +11,6 @@
 @import "button";
 @import "login";
 @import "form";
-@import "dashboard";
 @import "table";
 @import "total";
 
@@ -24,6 +23,7 @@ body {
   text-shadow: 0.1;
 }
 
-h1, h3 {
+h1, h2, h3, h4, h5, h6 {
   color: $dark-green;
+  font-family: 'Inter', sans-serif;
 }
