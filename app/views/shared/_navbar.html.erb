@@ -17,7 +17,7 @@
         <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font"> Sair</span></i>
       <% end %>
     </div>
-    <%= link_to root_path do %>
+    <%= link_to edit_user_registration_path do %>
       <div class="nav-item">
         <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
