@@ -21,7 +21,7 @@
           <th scope="row"><%= index + 1 %></th>
           <td><%= inflow.date.strftime "%d/%m/%y" %></td>
           <td><%= inflow.description %></td>
-          <td class="w-8rem d-flex justify-content-between"><span class="me-2">R$</span><span><%= number_to_currency(inflow.value, unit: "", separator: ",", delimiter: "") %></span></td>
+          <td class="w-8rem d-flex justify-content-between"><span class="me-2">R$</span><span><%= number_to_currency(inflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
           <td class="text-end"><%= link_to edit_finance_path(inflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
