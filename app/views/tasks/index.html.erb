@@ -21,6 +21,7 @@
         <tr>
           <th scope="col"></th>
           <th scope="col">Ordem</th>
+          <th scope="col">Data</th>
           <th scope="col">Conteúdo</th>
 
         </tr>
@@ -30,6 +31,7 @@
           <tr>
             <th scope="row"></th>
             <td><%= task.order %></td>
+            <td><%= task.date.strftime "%d/%m/%Y" %></td>
             <td><%= task.content %></td>
 
             <td><%= link_to edit_task_path(task), class: "text-success" do %>
