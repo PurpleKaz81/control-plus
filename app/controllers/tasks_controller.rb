@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = if params[:query].present?
-               Task.where("content ILIKE ?", "%#{params[:query]}%")
+    @tasks = if params[:search].present?
+               Task.where("content ILIKE ?", "%#{params[:search]}%")
              else
                Task.all
              end
