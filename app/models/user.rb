@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :tasks, dependent: :destroy
   has_many :finances, dependent: :destroy
   validates :first_name, :last_name, :phone_number, :email, :password, presence: true
+  has_one_attached :photo
 end

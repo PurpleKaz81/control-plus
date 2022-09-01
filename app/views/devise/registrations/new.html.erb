@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <section class="col-12 colsm-6 col-md-4 mt-5">
+    <section class="col-12 col-sm-6 mt-5">
       <div class="form-container">
         <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
           <h3 class="d-flex">Cadastre-se Gratuitamente</h3>
@@ -13,18 +13,19 @@
                             required: true,
                             autofocus: true %>
                 <%= f.input :last_name, label: "Sobrenome", placeholder: 'Digite seu sobrenome',
-                            required: true,
-                            autofocus: true %>
+                            required: true %>
                 <%= f.input :phone_number, label: "Telefone", placeholder: 'Digite seu telefone',
                             required: true,
                             autofocus: true %>
                 <%= f.input :email, label: "E-mail", placeholder: 'Digite seu e-mail',
                             required: true,
-                            autofocus: true,
-                            input_html: { autocomplete: "email" }%>
+                            input_html: { autocomplete: "email" } %>
+                <%= f.input :photo, label: "Foto",
+                            required: false,
+                            as: :file %>
                 <%= f.input :password, label: "Senha", placeholder: 'Digite sua senha',
                             required: true,
-                            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                            hint: ("Digite no mínimo #{@minimum_password_length} caracteres" if @minimum_password_length),
                             input_html: { autocomplete: "new-password" } %>
                 <%= f.input :password_confirmation, label: "Confirme sua senha", placeholder: 'Confirme sua senha',
                             required: true,
