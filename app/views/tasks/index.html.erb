@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center row w-100 mt-4">
   <div class="col-12 col-md-6 mt-4">
-    <h1 class="text-center"><strong>Tarefas</strong></h1>
+    <h1 class="text-center">Tarefas</h1>
 
     <div class="d-flex justify-content-center row w-100">
       <%= form_with url: tasks_path, method: :get, class: "search-bar d-flex col-6 mb-4" do %>
@@ -36,7 +36,7 @@
             <td><%= task.date.strftime "%d/%m/%Y" %></td>
             <td><%= task.content %></td>
 
-            <td><%= link_to edit_task_path(task), class: "text-success" do %>
+            <td class="text-end"><%= link_to edit_task_path(task), class: "text-success" do %>
 
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %></td>
