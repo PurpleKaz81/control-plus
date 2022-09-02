@@ -12,8 +12,8 @@ import "./controllers"
 //   total = "Good evening";
 // }
 
-const total = document.getElementById("total-color").classList.add("red");
-console.log("HI");
+// const total = document.getElementById("total-color").classList.add("red");
+// console.log("HI");
 // total.classList.add("red");
 
 

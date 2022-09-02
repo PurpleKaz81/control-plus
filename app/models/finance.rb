@@ -3,4 +3,8 @@ class Finance < ApplicationRecord
   validates :category, :description, :value, :date, presence: true
   # validates :category
   validates :description, length: { minimum: 5 }
+
+  def inflow?
+    category == 'Entrada'
+  end
 end

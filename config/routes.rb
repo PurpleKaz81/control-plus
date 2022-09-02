@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
   get '/footerpage', to: 'pages#footerpage'
+  # delete '/finances/:id', to: 'finances#destroy'
 
   resources :tasks
   resources :finances do

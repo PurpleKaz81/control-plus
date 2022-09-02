@@ -1,8 +1,8 @@
-<div class="btn-finance">
-<%= link_to "Ver Entradas", inflow_finances_path, class: "btn btn2 col-2 mt-4" %>
-</div>
 
 <div class="container">
+  <div class="btn-finance">
+    <%= link_to "Ver Entradas", inflow_finances_path, class: "btn btn2 col-2 mt-4" %>
+  </div>
   <h1 class="text-center"><strong>Suas Finanças</strong></h1>
   <h2><strong>Saídas</strong></h2>
   <table class="table table-striped table-hover">
@@ -25,7 +25,7 @@
           <td class="text-end"><%= link_to edit_finance_path(outflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
-          <%= link_to finances_path(outflow), class: "text-danger mx-2", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
+          <%= link_to finance_path(outflow), class: "text-danger mx-2", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
               <i class="fas fa-trash-alt" id="logo-trash"></i>
             <% end %></td>
         </tr>
