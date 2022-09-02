@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :move
+
   def index
     @tasks = if params[:search].present?
                Task.where('content ILIKE ?', "%#{params[:search]}%")
@@ -35,6 +37,14 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to tasks_path, status: :see_other, notice: 'Sua Tarefa Foi Deletada Com Sucesso.'
+  end
+
+  def move
+    @task = Task.find(params[:id])
+    @task.update!(position: params[:position].to_i)
+    render json: {
+      update: "ok"
+    }
   end
 
   private
