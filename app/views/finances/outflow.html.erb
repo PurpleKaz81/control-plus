@@ -21,7 +21,7 @@
           <th scope="row"><%= index + 1 %></th>
           <td><%= outflow.date.strftime "%d/%m/%y" %></td>
           <td><%= outflow.description %></td>
-          <td class="w-8rem d-flex justify-content-between"><span class="me-2">R$</span><span><%= number_to_currency(outflow.value, unit: "", separator: ",", delimiter: "") %></span></td>
+          <td class="w-8rem d-flex justify-content-between"><span class="me-2">R$</span><span><%= number_to_currency(outflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
           <td class="text-end"><%= link_to edit_finance_path(outflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
@@ -36,14 +36,14 @@
   <div class="totals mb-2">
     <p>Total de Saídas</p>
     <div class="row col-4">
-      <div class="card-body">
+      <div class="card-body-1">
         <p>R$ <%= number_to_currency(@outflow_sum, unit: "", separator: ",", delimiter: ".") %></p>
       </div>
     </div>
 
     <p class="mt-3 mb-2">Seu Total</p>
     <div class="row col-4 mt-2">
-      <div class="card-body">
+      <div class="card-body-1">
         <p>R$ <%= number_to_currency(@total, unit: "", separator: ",", delimiter: ".") %></p>
       </div>
     </div>

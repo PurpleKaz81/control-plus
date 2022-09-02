@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
   get '/footerpage', to:'pages#footerpage'
 
-  resources :tasks
+  resources :tasks do
+    member do
+      patch :move
+    end
+  end
   resources :finances do
     collection do
       get :inflow
