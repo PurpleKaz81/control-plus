@@ -16,7 +16,7 @@ user = User.new(first_name: 'teste', last_name: 'teste', email: 'teste@teste.com
 
 user.save
 
-puts 'Generating three inflows'
+puts 'Generating twenty inflows'
 
 entrada1 = Finance.new(
   date: '05/01/2022',
@@ -198,33 +198,35 @@ entrada20 = Finance.new(
 )
 entrada20.save!
 
-puts 'Generating three outflows'
+puts 'Finished generating inflows!'
+
+puts 'Generating twenty outflows'
 
 saida1 = Finance.new(
-  date: '22/01/2022',
-  description: 'Casa de repousa da minha mãe',
-  value: rand(1..99),
+  date: '07/01/2022',
+  description: 'Casa de repousa da mãe',
+  value: rand(345.00..380.00),
   user:,
   category: 'Saída'
 )
 saida1.save!
 
 saida2 = Finance.new(
-  date: '04/03/2022',
-  description: 'BK, pq tô aventureiro',
-  value: rand(500..999),
+  date: '11/01/2022',
+  description: 'Compras na Sendas',
+  value: rand(3000.00..4000.00),
   user:,
   category: 'Saída'
 )
 saida2.save!
 
 saida3 = Finance.new(
-  date: '05/04/2022',
-  description: 'Não lembro, tava lôko',
+  date: '15/01/2022',
+  description: 'Não lembro, tava bêbado',
   value: rand(1..75),
   user:,
   category: 'Saída'
 )
 saida3.save!
 
-puts 'Finished!'
+puts 'Finished generating twenty outflows!'
