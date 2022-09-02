@@ -157,7 +157,7 @@ main.cards section.card.about {
   margin-bottom: 15px;
 }
 
-.card-body {
+.card-body-1 {
   // padding: 1rem;
   border: 1px solid #0A522D;
   background-color: #EBEBEB;
@@ -169,4 +169,15 @@ main.cards section.card.about {
   p {
     margin: 0;
   }
+}
+
+.card-body {
+  // padding: 1rem;
+  background-color: #EBEBEB;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 5px;
+  width: 50%;
+
 }

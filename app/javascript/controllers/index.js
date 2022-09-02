@@ -4,14 +4,8 @@
 
 import { application } from "./application"
 
+import DragController from "./drag_controller"
+application.register("drag", DragController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-import NavbarController from "./navbar_controller"
-application.register("navbar", NavbarController)
-
-import TypedJsController from "./typed_js_controller"
-application.register("typed-js", TypedJsController)
-
-import { initSortable } from "./init_sortable"
-initSortable()

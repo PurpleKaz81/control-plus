@@ -1,10 +1,9 @@
 <%= simple_form_for(@task) do |f| %>
-  <div class="form-inputs row">
-    <div class="col-6">
+  <div class="form-inputs">
+    <div class="col-12">
       <%= f.input :content, label:"Descrição", placeholder: "Descreva sua tarefa" %>
     </div>
     <div class="col-6">
-    <%= f.input :order, label:"Ordem de prioridade",placeholder: "Defina sua prioridade" %>
     <%= f.input :date, label:"Selecione a data", as: :string, input_html: { type: "date" } %>
     </div>
 

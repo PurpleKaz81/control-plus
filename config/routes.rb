@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
 
-  resources :tasks
+  resources :tasks do
+    member do
+      patch :move
+    end
+  end
   resources :finances do
     collection do
       get :inflow
