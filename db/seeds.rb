@@ -39,7 +39,7 @@ entrada2.save!
 entrada3 = Finance.new(
   date: '14/01/2022',
   description: 'Dr. Juarez',
-  value: rand(199.99..750.00),
+  value: rand(2400.00..2800.00),
   user:,
   category: 'Entrada'
 )
@@ -75,7 +75,7 @@ entrada6.save!
 entrada7 = Finance.new(
   date: '14/02/2022',
   description: 'Dr. Juarez',
-  value: rand(199.99..750.00),
+  value: rand(2400.00..2800.00),
   user:,
   category: 'Entrada'
 )
@@ -111,7 +111,7 @@ entrada10.save!
 entrada11 = Finance.new(
   date: '14/03/2022',
   description: 'Dr. Juarez',
-  value: rand(199.99..750.00),
+  value: rand(2400.00..2800.00),
   user:,
   category: 'Entrada'
 )
@@ -147,7 +147,7 @@ entrada14.save!
 entrada15 = Finance.new(
   date: '14/04/2022',
   description: 'Dr. Juarez',
-  value: rand(199.99..750.00),
+  value: rand(2400.00..2800.00),
   user:,
   category: 'Entrada'
 )
@@ -183,7 +183,7 @@ entrada18.save!
 entrada19 = Finance.new(
   date: '14/05/2022',
   description: 'Dr. Juarez',
-  value: rand(199.99..750.00),
+  value: rand(2400.00..2800.00),
   user:,
   category: 'Entrada'
 )
