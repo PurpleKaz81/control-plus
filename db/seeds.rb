@@ -19,27 +19,27 @@ user.save
 puts 'Generating three inflows'
 
 entrada1 = Finance.new(
-  date: '22/01/2022',
-  description: 'Boteco do Toninho',
-  value: rand(1..99),
+  date: '05/01/2022',
+  description: 'Remuneração',
+  value: rand(4000.00..4500.00),
   user:,
   category: 'Entrada'
 )
 entrada1.save!
 
 entrada2 = Finance.new(
-  date: '04/03/2022',
+  date: '10/01/2022',
   description: 'Arroucho do Partidão',
-  value: rand(500..999),
+  value: rand(2000.00..2500.00),
   user:,
   category: 'Entrada'
 )
 entrada2.save!
 
 entrada3 = Finance.new(
-  date: '05/04/2022',
-  description: 'Suborno por cigarro, cela 23B',
-  value: rand(1..75),
+  date: '14/01/2022',
+  description: 'Dr. Juarez',
+  value: rand(199.99..750.00),
   user:,
   category: 'Entrada'
 )
@@ -48,137 +48,155 @@ entrada3.save!
 entrada4 = Finance.new(
   date: '22/01/2022',
   description: 'Boteco do Toninho',
-  value: rand(1..99),
+  value: rand(600.00..999.99),
   user:,
   category: 'Entrada'
 )
 entrada4.save!
 
 entrada5 = Finance.new(
-  date: '04/03/2022',
-  description: 'Arroucho do Partidão',
-  value: rand(500..999),
+  date: '05/02/2022',
+  description: 'Remuneração',
+  value: rand(4000.00..4500.00),
   user:,
   category: 'Entrada'
 )
 entrada5.save!
 
 entrada6 = Finance.new(
-  date: '05/04/2022',
-  description: 'Suborno por cigarro, cela 23B',
-  value: rand(1..75),
+  date: '10/02/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(2000.00..2500.00),
   user:,
   category: 'Entrada'
 )
 entrada6.save!
 
-entrada1 = Finance.new(
-  date: '22/01/2022',
+entrada7 = Finance.new(
+  date: '14/02/2022',
+  description: 'Dr. Juarez',
+  value: rand(199.99..750.00),
+  user:,
+  category: 'Entrada'
+)
+entrada7.save!
+
+entrada8 = Finance.new(
+  date: '22/02/2022',
   description: 'Boteco do Toninho',
-  value: rand(1..99),
+  value: rand(600.00..999.99),
   user:,
   category: 'Entrada'
 )
-entrada1.save!
+entrada8.save!
 
-entrada2 = Finance.new(
-  date: '04/03/2022',
+entrada9 = Finance.new(
+  date: '05/03/2022',
+  description: 'Remuneração',
+  value: rand(4000.00..4500.00),
+  user:,
+  category: 'Entrada'
+)
+entrada9.save!
+
+entrada10 = Finance.new(
+  date: '10/03/2022',
   description: 'Arroucho do Partidão',
-  value: rand(500..999),
+  value: rand(2000.00..2500.00),
   user:,
   category: 'Entrada'
 )
-entrada2.save!
+entrada10.save!
 
-entrada3 = Finance.new(
-  date: '05/04/2022',
-  description: 'Suborno por cigarro, cela 23B',
-  value: rand(1..75),
+entrada11 = Finance.new(
+  date: '14/03/2022',
+  description: 'Dr. Juarez',
+  value: rand(199.99..750.00),
   user:,
   category: 'Entrada'
 )
-entrada3.save!
+entrada11.save!
 
-entrada1 = Finance.new(
-  date: '22/01/2022',
+entrada12 = Finance.new(
+  date: '22/03/2022',
   description: 'Boteco do Toninho',
-  value: rand(1..99),
+  value: rand(600.00..999.99),
   user:,
   category: 'Entrada'
 )
-entrada1.save!
+entrada12.save!
 
-entrada2 = Finance.new(
-  date: '04/03/2022',
-  description: 'Arroucho do Partidão',
-  value: rand(500..999),
-  user:,
-  category: 'Entrada'
-)
-entrada2.save!
-
-entrada3 = Finance.new(
+entrada13 = Finance.new(
   date: '05/04/2022',
-  description: 'Suborno por cigarro, cela 23B',
-  value: rand(1..75),
+  description: 'Remuneração',
+  value: rand(4000.00..4500.00),
   user:,
   category: 'Entrada'
 )
-entrada3.save!
+entrada13.save!
 
-entrada1 = Finance.new(
-  date: '22/01/2022',
+entrada14 = Finance.new(
+  date: '10/04/2022',
+  description: 'Arroucho do Partidão',
+  value: rand(2000.00..2500.00),
+  user:,
+  category: 'Entrada'
+)
+entrada14.save!
+
+entrada15 = Finance.new(
+  date: '14/04/2022',
+  description: 'Dr. Juarez',
+  value: rand(199.99..750.00),
+  user:,
+  category: 'Entrada'
+)
+entrada15.save!
+
+entrada16 = Finance.new(
+  date: '22/04/2022',
   description: 'Boteco do Toninho',
-  value: rand(1..99),
+  value: rand(600.00..999.99),
   user:,
   category: 'Entrada'
 )
-entrada1.save!
+entrada16.save!
 
-entrada2 = Finance.new(
-  date: '04/03/2022',
+entrada17 = Finance.new(
+  date: '05/05/2022',
+  description: 'Remuneração',
+  value: rand(4000.00..4500.00),
+  user:,
+  category: 'Entrada'
+)
+entrada17.save!
+
+entrada18 = Finance.new(
+  date: '10/05/2022',
   description: 'Arroucho do Partidão',
-  value: rand(500..999),
+  value: rand(2000.00..2500.00),
   user:,
   category: 'Entrada'
 )
-entrada2.save!
+entrada18.save!
 
-entrada3 = Finance.new(
-  date: '05/04/2022',
-  description: 'Suborno por cigarro, cela 23B',
-  value: rand(1..75),
+entrada19 = Finance.new(
+  date: '14/05/2022',
+  description: 'Dr. Juarez',
+  value: rand(199.99..750.00),
   user:,
   category: 'Entrada'
 )
-entrada3.save!
+entrada19.save!
 
-entrada1 = Finance.new(
-  date: '22/01/2022',
+entrada20 = Finance.new(
+  date: '22/05/2022',
   description: 'Boteco do Toninho',
-  value: rand(1..99),
+  value: rand(600.00..999.99),
   user:,
   category: 'Entrada'
 )
-entrada1.save!
-
-entrada2 = Finance.new(
-  date: '04/03/2022',
-  description: 'Arroucho do Partidão',
-  value: rand(500..999),
-  user:,
-  category: 'Entrada'
-)
-entrada2.save!
-
-entrada3 = Finance.new(
-  date: '05/04/2022',
-  description: 'Suborno por cigarro, cela 23B',
-  value: rand(1..75),
-  user:,
-  category: 'Entrada'
-)
-entrada3.save!
+entrada20.save!
 
 puts 'Generating three outflows'
 
