@@ -229,157 +229,157 @@ saida3 = Finance.new(
 )
 saida3.save!
 
-saida3 = Finance.new(
+saida4 = Finance.new(
   date: '10/01/2022',
   description: 'Sandra Feitiço',
   value: rand(980.00..999.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida4.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
+saida5 = Finance.new(
+  date: '12/01/2022',
+  description: 'Boteco com Bino',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida5.save!
+
+saida6 = Finance.new(
+  date: '13/01/2022',
+  description: 'BK de café da manhã',
+  value: rand(30.00..40.00),
+  user:,
+  category: 'Saída'
+)
+saida6.save!
+
+saida7 = Finance.new(
+  date: '13/01/2022',
+  description: 'BK de almoço',
+  value: rand(30.00..40.00),
+  user:,
+  category: 'Saída'
+)
+saida7.save!
+
+saida8 = Finance.new(
+  date: '13/01/2022',
+  description: 'BK de jantar',
+  value: rand(30.00..40.00),
+  user:,
+  category: 'Saída'
+)
+saida8.save!
+
+saida9 = Finance.new(
+  date: '15/01/2022',
+  description: 'Psiquiatra',
+  value: rand(800.00..900.00),
+  user:,
+  category: 'Saída'
+)
+saida9.save!
+
+saida10 = Finance.new(
+  date: '15/01/2022',
+  description: 'Almoço',
+  value: rand(30.00..40.00),
+  user:,
+  category: 'Saída'
+)
+saida10.save!
+
+saida11 = Finance.new(
+  date: '15/01/2022',
+  description: 'Jantar com Suellen',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida11.save!
+
+saida12 = Finance.new(
+  date: '16/01/2022',
   description: 'Não lembro, tava bêbado',
   value: rand(80.00..100.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida12.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
+saida13 = Finance.new(
+  date: '17/01/2022',
+  description: '.45 antiga',
+  value: rand(80.00..200.00),
+  user:,
+  category: 'Saída'
+)
+saida13.save!
+
+saida14 = Finance.new(
+  date: '19/01/2022',
+  description: 'Óculos',
+  value: rand(440.00..470.00),
+  user:,
+  category: 'Saída'
+)
+saida14.save!
+
+saida15 = Finance.new(
+  date: '22/01/2022',
+  description: 'Descarga',
   value: rand(80.00..100.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida15.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
+saida16 = Finance.new(
+  date: '22/01/2022',
+  description: 'Jantar',
   value: rand(80.00..100.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida16.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
+saida17 = Finance.new(
+  date: '23/01/2022',
+  description: 'Café com Juquinha da Vila Medeiros',
   value: rand(80.00..100.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida17.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
+saida18 = Finance.new(
+  date: '25/01/2022',
+  description: 'Visita com Uberval',
   value: rand(80.00..100.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida18.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
+saida19 = Finance.new(
+  date: '30/01/2022',
   description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
+  value: rand(80.00..150.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
+saida19.save!
 
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
+saida20 = Finance.new(
+  date: '31/01/2022',
+  description: 'Remédios',
+  value: rand(350.00..450.00),
   user:,
   category: 'Saída'
 )
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
-
-saida3 = Finance.new(
-  date: '09/01/2022',
-  description: 'Não lembro, tava bêbado',
-  value: rand(80.00..100.00),
-  user:,
-  category: 'Saída'
-)
-saida3.save!
+saida20.save!
 
 puts 'Finished generating twenty outflows!'
