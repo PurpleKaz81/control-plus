@@ -212,8 +212,8 @@ saida1 = Finance.new(
 saida1.save!
 
 saida2 = Finance.new(
-  date: '11/01/2022',
-  description: 'Compras na Sendas',
+  date: '08/01/2022',
+  description: 'Compras do mês',
   value: rand(3000.00..4000.00),
   user:,
   category: 'Saída'
@@ -221,9 +221,162 @@ saida2 = Finance.new(
 saida2.save!
 
 saida3 = Finance.new(
-  date: '15/01/2022',
+  date: '09/01/2022',
   description: 'Não lembro, tava bêbado',
-  value: rand(1..75),
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '10/01/2022',
+  description: 'Sandra Feitiço',
+  value: rand(980.00..999.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
+  user:,
+  category: 'Saída'
+)
+saida3.save!
+
+saida3 = Finance.new(
+  date: '09/01/2022',
+  description: 'Não lembro, tava bêbado',
+  value: rand(80.00..100.00),
   user:,
   category: 'Saída'
 )
