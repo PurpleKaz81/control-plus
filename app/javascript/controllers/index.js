@@ -9,3 +9,6 @@ application.register("drag", DragController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import MoneyController from "./money_controller"
+application.register("money", MoneyController)
