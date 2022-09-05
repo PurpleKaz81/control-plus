@@ -1,7 +1,8 @@
 <div class="container">
 <div class="d-flex justify-content-center row w-100">
   <div class="col-12 col-md-6 mt-4">
-    <h1 class="text-center"><strong>Tarefas</strong></h1>
+    <h1 class="text-center">Tarefas</h1>
+
     <div class="d-flex justify-content-center row w-100">
       <%= form_with url: tasks_path, method: :get, class: "search-bar d-flex col-6" do %>
         <%= text_field_tag :search,
@@ -9,7 +10,7 @@
           class: "form-control",
           type: "search",
           name: "search",
-          required: true %>
+          required: false %>
         <%= button_tag type: :submit, class: "search-btn" do %>
           <span>Search</span>
         <% end %>
