@@ -3,6 +3,8 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 
+document.getElementById('value').placeholder = 'number';
+
 // const color = document.getElementById("total-color");
 // let total;
 // if (color < 10) {
