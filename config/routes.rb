@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
-  get '/quemsomos', to:'pages#quemsomos'
-  get '/recursos', to:'pages#recursos'
-  get '/faq', to:'pages#faq'
+  get '/quemsomos', to: 'pages#quemsomos'
+  get '/recursos', to: 'pages#recursos'
+  get '/faq', to: 'pages#faq'
 
   resources :tasks do
     member do
-      patch "/move", to: "tasks#move"
+      patch '/move', to: 'tasks#move'
     end
   end
 
