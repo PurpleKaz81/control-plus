@@ -53,7 +53,12 @@ class FinancesController < ApplicationController
   def destroy
     @finance = Finance.find(params[:id])
     @finance.destroy
-    redirect_to finances_path, notice: 'Sua Entrada/Saída Foi Deletada Com Sucesso.'
+    if @finance.inflow?
+      redirect_to inflow_finances_path, notice: 'Sua Entrada Foi Deletada Com Sucesso.'
+    else
+      redirect_to outflow_finances_path, notice: 'Sua Saída Foi Deletada Com Sucesso.'
+    end
+    # redirect_to finances_path, notice: 'Sua Entrada/Saída Foi Deletada Com Sucesso.'
   end
 
   private

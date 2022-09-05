@@ -5,3 +5,20 @@
   justify-content: center;
   padding: 1rem;
 }
+
+.green {
+color: blueviolet;
+}
+
+.red {
+  color: red;
+
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}

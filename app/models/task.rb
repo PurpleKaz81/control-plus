@@ -2,7 +2,7 @@ class Task < ApplicationRecord
   belongs_to :user
   validates :content, :date, :time, presence: true
   validates :content, length: { minimum: 5 }
-  acts_as_list
+  # acts_as_list
 
   # private
 

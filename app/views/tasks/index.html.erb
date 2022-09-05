@@ -39,7 +39,9 @@
             <td><%= task.date.strftime "%d/%m/%Y" %></td>
             <td><%= task.time %></td>
             <td><%= task.content %></td>
-            <td><%= link_to edit_task_path(task), class: "text-success" do %>
+
+            <td class="text-end"><%= link_to edit_task_path(task), class: "text-success" do %>
+
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %></td>
             <td><%= link_to task_path(task), class: "text-danger", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
