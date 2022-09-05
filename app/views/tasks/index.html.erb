@@ -1,9 +1,9 @@
-<div class="d-flex justify-content-center row w-100 mt-4">
+<div class="container">
+<div class="d-flex justify-content-center row w-100">
   <div class="col-12 col-md-6 mt-4">
-    <h1 class="text-center">Tarefas</h1>
-
+    <h1 class="text-center"><strong>Tarefas</strong></h1>
     <div class="d-flex justify-content-center row w-100">
-      <%= form_with url: tasks_path, method: :get, class: "search-bar d-flex col-6 mb-4" do %>
+      <%= form_with url: tasks_path, method: :get, class: "search-bar d-flex col-6" do %>
         <%= text_field_tag :search,
           params[:search],
           class: "form-control",
@@ -15,25 +15,29 @@
         <% end %>
       <% end %>
     </div>
-
   </div>
 </div>
 
+<div class="d-flex justify-content-end mb-1">
+    <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mb-2 mx-0" %>
+  </div>
 
-<div class="container">
-  <table class="table table-striped table-hover">
-      <tbody>
+
+  <table class="table table-striped table-hover mb-5">
+      <thead class="thead">
         <tr>
-          <th scope="col">Data</th>
-          <th scope="col">Descrição</th>
+          <th scope="col" class="w-8rem">Data</th>
+          <th scope="col" class="w-8rem">Hora</th>
+          <th scope="col">Tarefas</th>
           <th scope="col"></th>
           <th scope="col"></th>
         </tr>
       </thead>
-        <tbody>
-      <% @tasks.each do |task| %>
-          <tr>
+        <tbody data-controller="drag" data-drag-url="/tasks/:id/move">
+      <% @tasks.order(position: :asc).each do |task| %>
+          <tr data-id="<%= task.id %>">
             <td><%= task.date.strftime "%d/%m/%Y" %></td>
+            <td><%= task.time %></td>
             <td><%= task.content %></td>
 
             <td class="text-end"><%= link_to edit_task_path(task), class: "text-success" do %>
@@ -47,7 +51,4 @@
       <% end %>
         </tbody>
     </table>
-  </div>
-  <div class="d-flex justify-content-center">
-    <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mt-3 mb-3" %>
   </div>
