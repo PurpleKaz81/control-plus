@@ -11,14 +11,14 @@
           class: "form-control",
           type: "search",
           name: "search",
-          required: true %>
+          required: false %>
         <%= button_tag type: :submit, class: "search-btn" do %>
           <span>Search</span>
         <% end %>
       <% end %>
     </div>
   </div>
-  <div class="d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center justify-content-between mb-1">
     <h2><strong>Saídas</strong></h2>
     <%= link_to "Nova Saída", new_finance_path, class: "btn btn1 col-2 mx-0" %>
   </div>
@@ -32,7 +32,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @outflows.each_with_index do |outflow| %>
+      <% @outflows.reverse.each do |outflow| %>
         <tr>
           <td><%= outflow.date.strftime "%d/%m/%y" %></td>
           <td><%= outflow.description %></td>

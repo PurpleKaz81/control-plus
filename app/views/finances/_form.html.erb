@@ -8,7 +8,7 @@
       <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria' %>
     </div>
     <div class="col-6">
-      <%= f.input :value, label: 'Valor (R$)', placeholder: "Digite o Valor", input_html: { data: { controller: 'money', action: 'input->money#format' } } %>
+      <%= f.input :value, label: 'Valor (R$)', placeholder: "Digite o Valor" %>
     </div>
   </div>
   <div class="form-actions mt-4">

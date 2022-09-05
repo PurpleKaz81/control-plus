@@ -11,7 +11,7 @@
           class: "form-control",
           type: "search",
           name: "search",
-          required: true %>
+          required: false %>
         <%= button_tag type: :submit, class: "search-btn" do %>
           <span>Search</span>
         <% end %>
@@ -32,7 +32,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @inflows.each_with_index do |inflow| %>
+      <% @inflows.reverse.each do |inflow| %>
         <tr>
           <td><%= inflow.date.strftime "%d/%m/%y" %></td>
           <td><%= inflow.description %></td>
