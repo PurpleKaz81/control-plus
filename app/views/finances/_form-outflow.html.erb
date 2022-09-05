@@ -1,11 +1,11 @@
-<%= simple_form_for(@finance) do |f| %>
+<%= simple_form_for @finance, html: { data: { controller: 'money', action: 'submit->money#formatMoney' } } do |f| %>
   <div class="form-inputs row">
     <%= f.input :description, label: 'Descrição', placeholder: "Descreva sua Saída" %>
   <div class="col-6">
     <%= f.input :date, label: 'Data', placeholder: "Selecione a Data", as: :string, input_html: { type: "date" } %>
   </div>
     <div class="col-6">
-      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria', placeholder: "Descreva sua Categoria", selected: "Saída" %>
+      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria', selected: "Saída" %>
     </div>
     <div class="col-6">
       <%= f.input :value, label: 'Valor (R$)', placeholder: "Digite o Valor", input_html: { type: 'text', data: { money_target: 'input', action: 'input->money#format' } } %>
