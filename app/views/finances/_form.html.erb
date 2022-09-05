@@ -5,14 +5,17 @@
     <%= f.input :date, label: 'Data', placeholder: "Selecione a Data", as: :string, input_html: { type: "date" } %>
   </div>
     <div class="col-6">
-      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria', placeholder: "Descreva sua Categoria" %>
+      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria' %>
     </div>
     <div class="col-6">
       <%= f.input :value, label: 'Valor (R$)', placeholder: "Digite o Valor" %>
     </div>
   </div>
   <div class="form-actions mt-4">
-    <%= link_to 'Cancelar', @finance.category = 'inflow' ? inflow_finances_path : outflow_finances_path, class: "btn btn2" %>
+    <%= link_to 'Cancelar', finances_path, class: "btn btn2" %>
     <%= f.button :submit, "Salvar", class: "btn btn1" %>
   </div>
 <% end %>
+
+<%# placeholder: "Descreva sua Categoria"  %>
+<%# above placeholder taken from line 8 because redundant %>

@@ -6,12 +6,16 @@ class FinancesController < ApplicationController
   def inflow
     @inflows = current_user.finances.where(category: 'Entrada')
     @inflow_sum = @inflows.sum(:value)
+    @inflows = @inflows.where('description ILIKE ?', "%#{params[:search]}%") if params[:search].present?
+    @total_filtered = @inflows.sum(:value)
     @total = total
   end
 
   def outflow
     @outflows = current_user.finances.where(category: 'Saída')
     @outflow_sum = @outflows.sum(:value)
+    @outflows = @outflows.where('description ILIKE ?', "%#{params[:search]}%") if params[:search].present?
+    @total_filtered = @outflows.sum(:value)
     @total = total
   end
 
