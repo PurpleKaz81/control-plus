@@ -17,5 +17,6 @@ Rails.application.routes.draw do
       get :inflow
       get :outflow
     end
+    get "new-outflow", on: :collection
   end
 end

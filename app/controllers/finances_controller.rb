@@ -19,6 +19,10 @@ class FinancesController < ApplicationController
     @finance = Finance.new
   end
 
+  def new_outflow
+    @finance = Finance.new
+  end
+
   def create
     @finance = Finance.new(strong_params)
     @finance.user = current_user
