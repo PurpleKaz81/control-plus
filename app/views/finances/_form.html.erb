@@ -1,6 +1,6 @@
 <%= simple_form_for @finance, html: { data: { controller: 'money', action: 'submit->money#formatMoney' } } do |f| %>
   <div class="form-inputs row">
-    <%= f.input :description, label: 'Descrição', placeholder: "Descreva sua Entrada/Saída" %>
+    <%= f.input :description, label: 'Descrição', placeholder: "Descreva sua Entrada" %>
   <div class="col-6">
     <%= f.input :date, label: 'Data', placeholder: "Selecione a Data", as: :string, input_html: { type: "date" } %>
   </div>
@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="form-actions mt-4">
-    <%= link_to 'Cancelar', finances_path, class: "btn btn2" %>
+    <%= link_to 'Cancelar', inflow_finances_path, class: "btn btn2" %>
     <%= f.button :submit, "Salvar", class: "btn btn1" %>
   </div>
 <% end %>
