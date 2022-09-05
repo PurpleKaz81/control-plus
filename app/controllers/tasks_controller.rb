@@ -50,6 +50,6 @@ class TasksController < ApplicationController
   private
 
   def strong_params
-    params.require(:task).permit(:content, :date, :order)
+    params.require(:task).permit(:content, :date, :time)
   end
 end
