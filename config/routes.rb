@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   get '/recursos', to:'pages#recursos'
   get '/faq', to:'pages#faq'
 
-  resources :tasks
+  resources :tasks do
+    member do
+      patch "/move", to: "tasks#move"
+    end
+  end
 
   resources :finances do
     collection do
