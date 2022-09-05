@@ -43,7 +43,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.update!(position: params[:position].to_i)
     render json: {
-      update: "ok"
+      update: 'ok'
     }
   end
 
