@@ -2,20 +2,29 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="money"
 export default class extends Controller {
+  static targets = ['input'];
+
   connect() {
-    console.log('money connected');
+    this.format();
   }
+
   format() {
-    const rawValue = this.element.value.replaceAll('.', '').replaceAll(',', '').replace(/^0+/, '');
-    console.log(rawValue);
-    if (rawValue.length >= 2) {
-      this.element.value = rawValue
-    } else {
-      const integerValue = rawValue.substring(0, rawValue.length - 2);
-      const centsValue = rawValue.substring(rawValue.length - 2, rawValue.length);
-      const formattedValue = `${integerValue},${centsValue}`;
-      console.log(formattedValue);
-      this.element.value = formattedValue
-    }
+    const rawValue = this.setRawValue();
+    const options = {minimumFractionDigits: 2};
+    const formattedValue = new Intl.NumberFormat('pt-BR', options).format(
+      parseFloat(rawValue)/100
+    );
+    this.inputTarget.value = formattedValue;
+  }
+
+  formatMoney(e) {
+    e.preventDefault();
+    const rawValue = this.setRawValue();
+    this.inputTarget.value = rawValue/100;
+    this.element.submit();
+  }
+
+  setRawValue() {
+    return this.inputTarget.value.replace('.', '').replace(',', '').replace(/\D/g, '');
   }
 }
