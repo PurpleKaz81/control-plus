@@ -3,12 +3,13 @@
     <div class="col-12">
       <%= f.input :content, label:"Descrição", placeholder: "Descreva sua tarefa" %>
     </div>
-    <div class="col-4">
-    <%= f.input :date, label:"Selecione a data", as: :string, input_html: { type: "date" } %>
-    </div>
-    <div class="col-4">
-
-    <%= f.input :time, label:"Selecione a hora", as: :string, input_html: { type: "time" } %>
+    <div class=" d-flex justify-content-between">
+      <div class="col-5">
+      <%= f.input :date, label:"Selecione a data", as: :string, input_html: { type: "date" } %>
+      </div>
+      <div class="col-5">
+      <%= f.input :time, label:"Selecione a hora", as: :string, input_html: { type: "time" } %>
+      </div>
     </div>
   </div>
 

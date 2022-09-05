@@ -5,7 +5,7 @@
     <%= f.input :date, label: 'Data', placeholder: "Selecione a Data", as: :string, input_html: { type: "date" } %>
   </div>
     <div class="col-6">
-      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria', placeholder: "Descreva sua Categoria" %>
+      <%= f.input :category, collection: %w[Entrada Saída], prompt: "Selecione a categoria", label: 'Categoria', placeholder: "Descreva sua Categoria", selected: "Saída" %>
     </div>
     <div class="col-6">
       <%= f.input :value, label: 'Valor (R$)', placeholder: "Digite o Valor" %>
@@ -16,3 +16,4 @@
     <%= f.button :submit, "Salvar", class: "btn btn1" %>
   </div>
 <% end %>
+
