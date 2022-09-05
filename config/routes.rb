@@ -6,18 +6,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
-  get '/footerpage', to: 'pages#footerpage'
+  get '/quemsomos', to:'pages#quemsomos'
+  get '/recursos', to:'pages#recursos'
+  get '/faq', to:'pages#faq'
 
   resources :tasks
-  # do
-  #   member do
-  #     patch :move
-  #   end
-  # end
+
   resources :finances do
     collection do
       get :inflow
       get :outflow
     end
+    get 'new-outflow', on: :collection
   end
 end
