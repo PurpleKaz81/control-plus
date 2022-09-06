@@ -1,7 +1,7 @@
 <div class="container">
   <div class="d-flex justify-content-center row w-100">
     <div class="col-12 col-md-6 mt-4">
-      <h1 class="text-center">Tarefas</h1>
+      <h1 class="text-center">Suas Tarefas</h1>
       <div class="d-flex justify-content-center row w-100">
         <%= form_with url: tasks_path, method: :get, class: "search-bar d-flex col-6" do %>
           <%= text_field_tag :search,
@@ -17,6 +17,7 @@
       </div>
     </div>
   </div>
+
   <div class="d-flex justify-content-end mb-1">
     <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mb-2 mx-0" %>
   </div>
