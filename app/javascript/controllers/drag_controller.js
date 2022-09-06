@@ -24,4 +24,18 @@ export default class extends Controller {
       .then((data) => {
       })
   }
+
+  conclude(event) {
+    let id = event.target.dataset.id
+     
+    fetch(this.data.get("concludeUrl").replace(":id", id), {
+      method: "PATCH",
+      headers: {"Accept": "text/plain"}
+    })
+      .then(response => response.text())
+      .then((data) => {
+        event.target.parentNode.parentNode.outerHTML = data
+      })
+  }
 }
+
