@@ -13,18 +13,18 @@
       <%= link_to finances_path, class: "nav-menu" do %>
         <i class="fa-solid fa-brazilian-real-sign"><span class="menu-font"> Finanças</span></i>
       <% end %>
-      <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu" do %>
-        <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font"> Sair</span></i>
+      <%= link_to "#", data: {turbo_method: :delete}, class: "nav-menu" do %>
+        <i class="fa-solid fa-arrow-trend-up"><span class="menu-font"> Metas</span></i>
       <% end %>
     </div>
 
     <div class="flex text-end">
       <div>
         <%= link_to  edit_user_registration_path, class: "nav-menu" do %>
-          <span class="menu-font color-dark-green"><%= current_user.first_name  %></span>
+          <span class="menu-font color-dark-green"><strong><%= "#{current_user.first_name} #{current_user.last_name}"  %></strong></span>
         <% end %>
-        <%= link_to   destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu" do %>
-          <span class="menu-font color-dark-green">log out</span>
+        <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu-avatar" do %>
+          <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font-avatar"> Sair</span></i>
         <% end %>
       </div>
 
