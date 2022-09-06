@@ -8,6 +8,8 @@
 
 puts 'Cleaning database...'
 User.destroy_all
+Finance.destroy_all
+Task.destroy_all
 
 puts 'Generating user'
 

@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: :move
+  skip_before_action :verify_authenticity_token, only: [:move, :complete]
 
   def index
     @tasks = if params[:search].present?
                Task.where('content ILIKE ?', "%#{params[:search]}%")
              else
-               Task.all
+              current_user.tasks
              end
   end
 
@@ -45,6 +45,15 @@ class TasksController < ApplicationController
     render json: {
       update: 'ok'
     }
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(completed: !@task.completed)
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "shared/row", locals: {task: @tasks}, formats: [:html] }
+    end
   end
 
   private

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :tasks do
     member do
       patch '/move', to: 'tasks#move'
+      patch '/complete', to: 'tasks#complete'
     end
   end
 
