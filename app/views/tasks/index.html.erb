@@ -35,7 +35,7 @@
         <tr class="<%= task.completed ? "opacity-50" : "" %>" data-id="<%= task.id %>">
           <td><%= task.date.strftime "%d/%m/%y" %></td>
           <td><%= task.time %></td>
-          <td><%= task.content %></td>      
+          <td><%= task.content %></td>
           <td class="text-end">
             <a class="color-dark-green text-decoration-none"> Concluído? </a>
             <i data-id="<%= task.id %>" data-action="click->drag#conclude" class="<%= task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
