@@ -1,5 +1,5 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
-en:
+pt-BR:
   devise:
     confirmations:
       confirmed: "A sua conta foi confirmada com sucesso."
@@ -64,3 +64,8 @@ en:
         other: "Não foi possível salvar %{resource}: %{count} erros."
         and: "e"
       too_short: "é curto demais (mínimo de 5 caracteres)"
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
