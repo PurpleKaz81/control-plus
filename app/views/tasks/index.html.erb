@@ -29,16 +29,15 @@
         <th scope="col"></th>
       </tr>
     </thead>
-    <tbody data-controller="drag" data-drag-url="/tasks/:id/move">
+    <tbody data-controller="drag" data-drag-url="/tasks/:id/move" data-drag-conclude-url="/tasks/:id/complete">
       <% @tasks.order(position: :asc).each do |task| %>
         <tr class="<%= task.completed ? "opacity-50" : "" %>" data-id="<%= task.id %>">
           <td><%= task.date.strftime "%d/%m/%y" %></td>
           <td><%= task.time %></td>
           <td><%= task.content %></td>      
           <td class="text-end">
-            <%= link_to complete_task_path(task), class: "text-decoration-none mx-2", data: { turbo_method: :patch } do %>
-              <i class="<%= task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-edit"></i>
-            <% end %>
+            <a class="color-dark-green text-decoration-none"> Concluído? </a>
+            <i data-id="<%= task.id %>" data-action="click->drag#conclude" class="<%= task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
             <%= link_to edit_task_path(task), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
