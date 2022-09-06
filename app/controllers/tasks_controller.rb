@@ -47,6 +47,12 @@ class TasksController < ApplicationController
     }
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update(completed: !@task.completed)
+    redirect_to tasks_path, status: :see_other
+  end
+
   private
 
   def strong_params
