@@ -12,7 +12,7 @@ export default class extends Controller {
     const rawValue = this.setRawValue();
     if (rawValue.length > 0) {
       const options = {minimumFractionDigits: 2};
-      const formattedValue = new Intl.NumberFormat(‘pt-BR’, options).format(
+      const formattedValue = new Intl.NumberFormat('pt-BR', options).format(
         parseFloat(rawValue)/100
       );
       this.inputTarget.value = formattedValue;
