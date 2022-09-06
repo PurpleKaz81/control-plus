@@ -22,7 +22,7 @@
         <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
         <% else  %>
-          <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+          <i class="fa-solid fa-user-plus"></i>
         <% end %>
       </div>
     <% end %>
