@@ -22,7 +22,7 @@
         <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
         <% else  %>
-          <i class="fa-solid fa-user-plus"></i>
+          <i class="fa-solid fa-circle-user"></i>
         <% end %>
       </div>
     <% end %>
