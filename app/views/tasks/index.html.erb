@@ -20,8 +20,8 @@
 </div>
 
 <div class="d-flex justify-content-end mb-1">
-    <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mb-2 mx-0" %>
-  </div>
+  <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mb-2 mx-0" %>
+</div>
 
 
   <table class="table table-striped table-hover">
@@ -35,23 +35,20 @@
         </tr>
       </thead>
         <tbody data-controller="drag" data-drag-url="/tasks/:id/move">
-      <% @tasks.order(position: :asc).each do |task| %>
-          <tr data-id="<%= task.id %>">
-            <td><%= task.date.strftime "%d/%m/%Y" %></td>
-            <td><%= task.time %></td>
-            <td><%= task.content %></td>
-            <td><%= task.position %></td>
-
-            <td class="text-end"><%= link_to edit_task_path(task), class: "text-success" do %>
-
-              <i class="fas fa-edit" id="logo-edit"></i>
-            <% end %></td>
-            <td><%= link_to task_path(task), class: "text-danger", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
-              <i class="fas fa-trash-alt" id="logo-trash"></i>
-            <% end %></td>
-          </tr>
-      <% end %>
+          <% @tasks.order(position: :asc).each do |task| %>
+            <tr data-id="<%= task.id %>">
+              <td><%= task.date.strftime "%d/%m/%y" %></td>
+              <td><%= task.time %></td>
+              <td><%= task.content %></td>
+              <td class="text-end"><%= link_to edit_task_path(task), class: "text-success" do %>
+                <i class="fas fa-edit" id="logo-edit"></i>
+              <% end %></td>
+              <td><%= link_to task_path(task), class: "text-danger", data: {turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?"} do %>
+                <i class="fas fa-trash-alt" id="logo-trash"></i>
+              <% end %></td>
+            </tr>
+          <% end %>
         </tbody>
     </table>
-            <p class="mb-5">Obs: Para ordenar suas tarefas, basta clicar e arrastar para a ordem desejada.</p>
+            <p class="mb-5">Obs: Para reordenar suas tarefas, basta clicar e arrastar para a ordem desejada.</p>
   </div>
