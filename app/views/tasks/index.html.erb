@@ -40,6 +40,7 @@
             <td><%= task.date.strftime "%d/%m/%Y" %></td>
             <td><%= task.time %></td>
             <td><%= task.content %></td>
+            <td><%= task.position %></td>
 
             <td class="text-end"><%= link_to edit_task_path(task), class: "text-success" do %>
 
