@@ -12,16 +12,14 @@ pt-BR:
         password: "Senha"
         password_confirmation: "Confirmação da senha"
       task:
-        content: "conteúdo"
+        content: "descrição"
         date: "A data"
         time: "A hora"
-      # finance:
-      #   inflow: "Entrada"
-      #     date: "Data"
-      #     description: "Descrição"
-      #     value: "Valor"
-      #     category: "Categoria"
-      #   ou
+      finance:
+        date: "Data"
+        description: "descrição"
+        value: "Valor"
+        category: "Categoria"
   errors:
     format: "%{attribute} %{message}"
     messages:
