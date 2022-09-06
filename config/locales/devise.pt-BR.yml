@@ -63,7 +63,7 @@ pt-BR:
         one: "Não foi possível salvar %{resource}: 1 erro"
         other: "Não foi possível salvar %{resource}: %{count} erros."
         and: "e"
-      too_short: "é curto demais (mínimo de 5 caracteres)"
+      too_short: "é curta demais (mínimo de 5 caracteres)"
   support:
     array:
       last_word_connector: " e "
