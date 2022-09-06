@@ -3,11 +3,11 @@
     <section class="col-12 colsm-6 col-md-4 mt-5 mb-5">
       <div class="form-container">
         <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
-          <h3 class="d-flex">Acesse a sua conta</h3>
+          <h3 class="d-flex">Acesse Sua Conta</h3>
             <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
               <div class="form-inputs">
                 <%= f.input :email, label: false, placeholder: 'Digite seu e-mail',
-                            required: false, 
+                            required: false,
                             autofocus: true,
                             input_html: { autocomplete: "email" } %>
                 <%= f.input :password, label: false, placeholder: 'Digite sua senha',
