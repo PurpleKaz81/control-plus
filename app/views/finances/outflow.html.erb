@@ -69,13 +69,11 @@
     <div class="row col-2 mt-2">
       <div class="card-body-1">
       <% if @total.negative? %>
-        <p class="red blink_me">R$ <%= number_to_currency(@total, unit: "", separator: ",", delimiter: ".") %></p>
+        <p class="red blink_me mb-5">R$ <%= number_to_currency(@total, unit: "", separator: ",", delimiter: ".") %></p>
       <% else %>
         <p>R$ <%= number_to_currency(@total, unit: "", separator: ",", delimiter: ".") %></p>
       <% end %>
       </div>
     </div>
-
-    <%= link_to "Nova Saída", new_outflow_finances_path, class: "btn btn1 col-2 mt-3" %>
   </div>
 </div>
