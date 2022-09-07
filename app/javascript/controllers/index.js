@@ -15,3 +15,6 @@ application.register("money", MoneyController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import SweetalertController from "./sweetalert_controller"
+application.register("sweetalert", SweetalertController)

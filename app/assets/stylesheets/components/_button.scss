@@ -88,9 +88,33 @@ i {
   font-size: 40px;
 }
 
-
 .btn-finance {
   display: flex;
   justify-content: end;
 }
 
+.btn-delete {
+  background-color: #0A522D;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 140px;
+  padding: .375rem .75rem;
+}
+
+.btn-cancel {
+  background-color: #fd3438;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 140px;
+  padding: .375rem .75rem;
+}
