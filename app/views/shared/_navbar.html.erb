@@ -4,9 +4,9 @@
   </a>
   <% if user_signed_in? %>
   <div class="navbar-sign-in">
-    <div class="navigation">
+    <div id="navbar-elements" class="navigation" data-controller="navbar">
       <ul>
-        <li class="list active">
+        <li class="list <%= current_page?(controller: 'pages', action: 'dashboard') ? "active" : "" %>">
           <a href="<%= dashboard_path %>">
             <span class="icon">
               <i class="fa-solid fa-house"></i>
@@ -14,7 +14,7 @@
             <span class="text">Home</span>
           </a>
         </li>
-        <li class="list">
+        <li class="list <%= current_page?(controller: 'tasks') ? "active" : "" %>">
           <a href="<%= tasks_path %>">
             <span class="icon">
               <i class="fa-solid fa-list-check"></i>
@@ -22,7 +22,7 @@
             <span class="text">Tarefas</span>
           </a>
         </li>
-        <li class="list">
+        <li class="list <%= current_page?(controller: 'finances') ? "active" : "" %>" >
           <a href="<%= finances_path %>">
             <span class="icon">
               <i class="fa-solid fa-brazilian-real-sign"></i>
@@ -33,20 +33,6 @@
         <div class="indicator"></div>  
       </ul>
     </div>
-    <script>
-      const list = document.querySelectorAll('.list')
-      function activeLink(){
-        list.forEach((item) =>
-        item.classList.remove('active'));
-        this.classList.add('active');
-      }
-      list.forEach((item) =>
-        ['click','mouseover'].forEach( evt => 
-        item.addEventListener(evt, activeLink))
-      );       
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </div>
   <div class="flex text-end">
     <div>

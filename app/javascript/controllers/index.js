@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import MoneyController from "./money_controller"
 application.register("money", MoneyController)
+
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)
