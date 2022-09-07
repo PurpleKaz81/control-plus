@@ -1,4 +1,5 @@
 class FinancesController < ApplicationController
+  before_action :set_finance, only: %i[edit edit_outflow update destroy]
   def index
     @finances = current_user.finances
   end
@@ -41,12 +42,11 @@ class FinancesController < ApplicationController
     end
   end
 
-  def edit
-    @finance = Finance.find(params[:id])
-  end
+  def edit; end
+
+  def edit_outflow; end
 
   def update
-    @finance = Finance.find(params[:id])
     if @finance.update(strong_params)
       if @finance.category == 'Entrada'
         redirect_to inflow_finances_path, notice: 'Entrada editada com sucesso.'
@@ -59,7 +59,6 @@ class FinancesController < ApplicationController
   end
 
   def destroy
-    @finance = Finance.find(params[:id])
     @finance.destroy
     if @finance.inflow?
       redirect_to inflow_finances_path, notice: 'Sua Entrada Foi Deletada Com Sucesso.'
@@ -70,6 +69,10 @@ class FinancesController < ApplicationController
   end
 
   private
+
+  def set_finance
+    @finance = Finance.find(params[:id])
+  end
 
   def strong_params
     params.require(:finance).permit(:category, :description, :value, :date)

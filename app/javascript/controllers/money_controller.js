@@ -10,6 +10,7 @@ export default class extends Controller {
 
   format() {
     const rawValue = this.setRawValue();
+    console.log(rawValue)
     if (rawValue.length > 0) {
       const options = {minimumFractionDigits: 2};
       const formattedValue = new Intl.NumberFormat('pt-BR', options).format(
