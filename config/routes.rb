@@ -24,4 +24,5 @@ Rails.application.routes.draw do
     end
     get 'new-outflow', on: :collection
   end
+  get 'finances/:id/edit-outflow', to: 'finances#edit_outflow', as: 'edit_outflow'
 end

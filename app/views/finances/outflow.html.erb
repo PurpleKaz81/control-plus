@@ -37,7 +37,7 @@
           <td><%= outflow.date.strftime "%d/%m/%y" %></td>
           <td><%= outflow.description %></td>
           <td class="w-8rem d-flex justify-content-between"><span class="me-2">R$</span><span><%= number_to_currency(outflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
-          <td class="text-end"><%= link_to edit_finance_path(outflow), class: "text-decoration-none mx-2" do %>
+          <td class="text-end"><%= link_to edit_outflow_path(outflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
           <%= link_to finance_path(outflow), class: "text-danger mx-2", data: { turbo_method: :delete, turbo_confirm: "Você quer mesmo deletar?" } do %>
