@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_170817) do
   create_table "finances", force: :cascade do |t|
     t.string "category"
     t.text "description"
-    t.decimal "value", precision: 10, scale: 2
+    t.decimal "value"
     t.date "date"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
