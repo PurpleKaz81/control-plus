@@ -6,7 +6,7 @@
   <div class="navbar-sign-in">
     <div id="navbar-elements" class="navigation" data-controller="navbar">
       <ul>
-        <li class="list <%= current_page?(controller: '/pages', action: 'dashboard') ? "active" : "" %>">
+        <li class="list <%= controller_name == 'pages' && action_name == 'dashboard' ? "active" : "" %>">
           <a href="<%= dashboard_path %>">
             <span class="icon">
               <i class="fa-solid fa-house"></i>
@@ -14,7 +14,7 @@
             <span class="text">Home</span>
           </a>
         </li>
-        <li class="list <%= current_page?(controller: '/tasks') ? "active" : "" %>">
+        <li class="list <%= controller_name == 'tasks' ? "active" : "" %>">
           <a href="<%= tasks_path %>">
             <span class="icon">
               <i class="fa-solid fa-list-check"></i>
@@ -22,7 +22,7 @@
             <span class="text">Tarefas</span>
           </a>
         </li>
-        <li class="list <%= current_page?(controller: '/finances') ? "active" : "" %>" >
+        <li class="list <%= controller_name == 'finances' ? "active" : "" %>" >
           <a href="<%= finances_path %>">
             <span class="icon">
               <i class="fa-solid fa-brazilian-real-sign"></i>
