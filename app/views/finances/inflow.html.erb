@@ -36,8 +36,8 @@
         <tr>
           <td><%= inflow.date.strftime "%d/%m/%y" %></td>
           <td><%= inflow.description %></td>
-          <td class="w-8rem d-flex justify-content-between"><span class="me-2">R$</span><span><%= number_to_currency(inflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
-          <td class="text-end"><%= link_to edit_finance_path(inflow), class: "text-decoration-none mx-2" do %>
+          <td class="w-8rem"><span class="me-2">R$</span><span><%= number_to_currency(inflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
+          <td class="d-flex gap-4 justify-content-end align-items-center"><%= link_to edit_finance_path(inflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
           <%= button_to finance_path(inflow), method: :delete, class: "text-danger", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
