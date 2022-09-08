@@ -40,7 +40,7 @@
           <td class="d-flex gap-4 justify-content-end align-items-center"><%= link_to edit_finance_path(inflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
-          <%= button_to finance_path(inflow), method: :delete, class: "text-danger", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
+          <%= button_to finance_path(inflow), method: :delete, class: "text-danger me-2", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
               <i class="fas fa-trash-alt" id="logo-trash"></i>
           <% end %></td>
         </tr>
