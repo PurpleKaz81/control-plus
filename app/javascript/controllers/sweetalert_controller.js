@@ -38,7 +38,7 @@ export default class extends Controller {
       ) {
         swalWithBootstrapButtons.fire(
           'Cancelado',
-          'Sua tarefa está a salva :)',
+          'Nada foi deletado! :)',
           'error'
         )
       }

@@ -14,7 +14,7 @@ const swalWithBootstrapButtons = Swal.mixin({
 if (window.location.href.includes('confirm=delete')) {
   swalWithBootstrapButtons.fire(
     'Deletada!',
-    'Sua tarefa foi deletada.',
+    'Deletada com sucesso! :)',
     'success'
   )
 }

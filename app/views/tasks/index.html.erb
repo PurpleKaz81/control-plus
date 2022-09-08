@@ -34,7 +34,7 @@
     </thead>
     <tbody data-controller="drag" data-drag-url="/tasks/:id/move" data-drag-conclude-url="/tasks/:id/complete">
       <% @tasks.order(position: :asc).each do |task| %>
-        <tr class="<%= task.completed ? "opacity-50" : "" %>" data-id="<%= task.id %>">
+        <tr class="<%= task.completed ? "opacity-50" : "" %>" data-id="<%= task.id %> ">
           <td><%= task.date.strftime "%d/%m/%y" %></td>
           <td><%= task.time %></td>
           <td><%= task.content %></td>

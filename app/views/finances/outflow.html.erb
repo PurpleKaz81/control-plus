@@ -40,7 +40,7 @@
           <td class="text-end"><%= link_to edit_outflow_path(outflow), class: "text-decoration-none mx-2" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
-          <%= link_to finance_path(outflow), class: "text-danger mx-2", data: { turbo_method: :delete, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
+          <%= button_to finance_path(outflow), method: :delete, class: "text-danger", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
               <i class="fas fa-trash-alt" id="logo-trash"></i>
             <% end %></td>
         </tr>
