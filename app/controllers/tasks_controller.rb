@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:move, :complete]
+  skip_before_action :verify_authenticity_token, only: %i[move complete]
 
   def index
     @tasks = if params[:search].present?
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_path, status: :see_other, notice: 'Sua Tarefa Foi Deletada Com Sucesso.'
+    redirect_to tasks_path(confirm: 'delete'), status: :see_other
   end
 
   def move
@@ -52,7 +52,7 @@ class TasksController < ApplicationController
     @task.update(completed: !@task.completed)
     respond_to do |format|
       format.html # Follow regular flow of Rails
-      format.text { render partial: "shared/row", locals: {task: @tasks}, formats: [:html] }
+      format.text { render partial: 'shared/row', locals: {task: @tasks}, formats: [:html] }
     end
   end
 

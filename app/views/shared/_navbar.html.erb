@@ -6,7 +6,7 @@
   <div class="navbar-sign-in">
     <div id="navbar-elements" class="navigation" data-controller="navbar">
       <ul>
-        <li class="list <%= current_page?(controller: 'pages', action: 'dashboard') ? "active" : "" %>">
+        <li class="list <%= current_page?(controller: '/pages', action: 'dashboard') ? "active" : "" %>">
           <a href="<%= dashboard_path %>">
             <span class="icon">
               <i class="fa-solid fa-house"></i>
@@ -14,7 +14,7 @@
             <span class="text">Home</span>
           </a>
         </li>
-        <li class="list <%= current_page?(controller: 'tasks') ? "active" : "" %>">
+        <li class="list <%= current_page?(controller: '/tasks') ? "active" : "" %>">
           <a href="<%= tasks_path %>">
             <span class="icon">
               <i class="fa-solid fa-list-check"></i>
@@ -22,7 +22,7 @@
             <span class="text">Tarefas</span>
           </a>
         </li>
-        <li class="list <%= current_page?(controller: 'finances') ? "active" : "" %>" >
+        <li class="list <%= current_page?(controller: '/finances') ? "active" : "" %>" >
           <a href="<%= finances_path %>">
             <span class="icon">
               <i class="fa-solid fa-brazilian-real-sign"></i>
@@ -30,14 +30,14 @@
             <span class="text">Finanças</span>
           </a>
         </li>
-        <div class="indicator"></div>  
+        <div class="indicator"></div>
       </ul>
     </div>
   </div>
   <div class="flex text-end">
     <div>
       <%= link_to  edit_user_registration_path, class: "nav-menu" do %>
-        <span class="menu-font color-dark-green"><strong><%= "#{current_user.first_name} #{current_user.last_name}"  %></strong></span>
+        <span class="menu-font color-dark-green"><strong><%= "#{current_user.first_name} #{current_user.last_name}" %></strong></span>
       <% end %>
       <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu-avatar" do %>
         <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font-avatar"> Sair</span></i>

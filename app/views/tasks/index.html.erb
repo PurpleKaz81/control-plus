@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  
+
 
   <div class="d-flex justify-content-end mb-1">
     <%= link_to "Nova tarefa", new_task_path, class: "btn btn1 mb-2 mx-0" %>
@@ -38,13 +38,13 @@
           <td><%= task.date.strftime "%d/%m/%y" %></td>
           <td><%= task.time %></td>
           <td><%= task.content %></td>
-          <td class="text-end">
+          <td class="d-flex gap-4 justify-content-end align-items-center">
             <a class="color-dark-green text-decoration-none"> Concluído? </a>
             <i data-id="<%= task.id %>" data-action="click->drag#conclude" class="<%= task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
-            <%= link_to edit_task_path(task), class: "text-decoration-none mx-2" do %>
+            <%= link_to edit_task_path(task), class: "text-decoration-none" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
             <% end %>
-            <%= link_to task_path(task), class: "text-danger mx-2", data: { turbo_method: :delete, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
+            <%= button_to task_path(task), method: :delete, class: "text-danger", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
               <i class="fas fa-trash-alt" id="logo-trash"></i>
             <% end %>
           </td>
@@ -54,3 +54,5 @@
   </table>
   <p class="mb-5">Obs: Para reordenar suas tarefas, clique e arraste para a ordem desejada.</p>
 </div>
+
+<%# , action: 'click->sweetalert#showAlert'  from line 47 %>
