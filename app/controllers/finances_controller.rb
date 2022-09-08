@@ -61,9 +61,9 @@ class FinancesController < ApplicationController
   def destroy
     @finance.destroy
     if @finance.inflow?
-      redirect_to inflow_finances_path, notice: 'Sua Entrada Foi Deletada Com Sucesso.'
+      redirect_to inflow_finances_path(confirm: 'delete'), status: :see_other
     else
-      redirect_to outflow_finances_path, notice: 'Sua Saída Foi Deletada Com Sucesso.'
+      redirect_to outflow_finances_path(confirm: 'delete'), status: :see_other
     end
     # redirect_to finances_path, notice: 'Sua Entrada/Saída Foi Deletada Com Sucesso.'
   end
