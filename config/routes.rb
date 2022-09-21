@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'sessions' }
+  match 'users/:id' => 'users#destroy', :via => %i[get delete], :as => :destroy_user
+  # match 'users/:id' => 'users#show', as: :user
+  # resources :users
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -25,4 +28,6 @@ Rails.application.routes.draw do
     get 'new-outflow', on: :collection
   end
   get 'finances/:id/edit-outflow', to: 'finances#edit_outflow', as: 'edit_outflow'
+
+  # delete '/users/:id' => 'users#destroy', as: :destroy_user
 end
