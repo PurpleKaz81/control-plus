@@ -5,7 +5,7 @@ class TasksController < ApplicationController
     @tasks = if params[:search].present?
                Task.where('content ILIKE ?', "%#{params[:search]}%")
              else
-              current_user.tasks
+               current_user.tasks
              end
   end
 
@@ -52,7 +52,7 @@ class TasksController < ApplicationController
     @task.update(completed: !@task.completed)
     respond_to do |format|
       format.html # Follow regular flow of Rails
-      format.text { render partial: 'shared/row', locals: {task: @tasks}, formats: [:html] }
+      format.text { render partial: 'shared/row', locals: { task: @tasks }, formats: [:html] }
     end
   end
 
