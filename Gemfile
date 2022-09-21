@@ -86,4 +86,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "pundit", "~> 2.2"
+gem 'pundit', '~> 2.2'

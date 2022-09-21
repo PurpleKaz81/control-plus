@@ -55,7 +55,7 @@ class TasksController < ApplicationController
     @task.update(completed: !@task.completed)
     respond_to do |format|
       format.html # Follow regular flow of Rails
-      format.text { render partial: 'shared/row', locals: {task: @tasks}, formats: [:html] }
+      format.text { render partial: 'shared/row', locals: { task: @tasks }, formats: [:html] }
     end
   end
 
