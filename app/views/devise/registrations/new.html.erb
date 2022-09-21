@@ -25,7 +25,7 @@
                             as: :file %>
                 <%= f.input :password, label: "Senha", placeholder: 'Digite sua senha',
                             required: true,
-                            hint: ("Digite no mínimo #{@minimum_password_length} caracteres" if @minimum_password_length),
+                            hint: ("Digite no mínimo #{@minimum_password_length} caracteres e use pelo menos uma letra maiúscula, uma minúscula e um símbolo" if @minimum_password_length),
                             input_html: { autocomplete: "new-password" } %>
                 <%= f.input :password_confirmation, label: "Confirme sua senha", placeholder: 'Confirme sua senha',
                             required: true,

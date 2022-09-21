@@ -28,3 +28,4 @@ pt-BR:
       confirmation: não é igual a %{attribute}
       empty: não pode ficar vazio
       invalid: inválido(a)
+      taken: já cadastrado
