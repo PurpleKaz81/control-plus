@@ -1,12 +1,11 @@
 class TasksController < ApplicationController
   skip_before_action :verify_authenticity_token, only: %i[move complete]
-  before_action :set_task_id, only: %i[edit update destroy complete]
 
   def index
     @tasks = if params[:search].present?
                Task.where('content ILIKE ?', "%#{params[:search]}%")
              else
-              current_user.tasks
+               current_user.tasks
              end
   end
 
@@ -24,14 +23,21 @@ class TasksController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @task = Task.find(params[:id])
+    authorize @task
+  end
 
   def update
+    @task = Task.find(params[:id])
+    authorize @task
     @task.update(strong_params)
     redirect_to tasks_path, notice: 'Tarefa editada com sucesso.'
   end
 
   def destroy
+    @task = Task.find(params[:id])
+    authorize @task
     @task.destroy
     redirect_to tasks_path(confirm: 'delete'), status: :see_other
   end
@@ -45,6 +51,7 @@ class TasksController < ApplicationController
   end
 
   def complete
+    @task = Task.find(params[:id])
     @task.update(completed: !@task.completed)
     respond_to do |format|
       format.html # Follow regular flow of Rails
