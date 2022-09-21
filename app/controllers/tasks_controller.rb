@@ -58,10 +58,6 @@ class TasksController < ApplicationController
 
   private
 
-  def set_task_id
-    @task = Task.find(params[:id])
-  end
-
   def strong_params
     params.require(:task).permit(:content, :date, :time)
   end
