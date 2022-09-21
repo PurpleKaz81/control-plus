@@ -25,19 +25,16 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
-    authorize @task
   end
 
   def update
     @task = Task.find(params[:id])
-    authorize @task
     @task.update(strong_params)
     redirect_to tasks_path, notice: 'Tarefa editada com sucesso.'
   end
 
   def destroy
     @task = Task.find(params[:id])
-    authorize @task
     @task.destroy
     redirect_to tasks_path(confirm: 'delete'), status: :see_other
   end

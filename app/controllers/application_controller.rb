@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   include Pundit::Authorization
 
+
   def configure_permitted_parameters
     authorized_fields = %i[first_name last_name phone_number photo]
     # For additional fields in app/views/devise/registrations/new.html.erb
@@ -17,4 +18,7 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { host: ENV['DOMAIN'] || 'localhost:3000' }
   end
+
+
+
 end
