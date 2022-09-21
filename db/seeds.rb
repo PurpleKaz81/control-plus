@@ -15,7 +15,10 @@ puts 'Generating user'
 
 user = User.new(first_name: 'teste', last_name: 'teste', email: 'teste@teste.com', password: '123123',
                 phone_number: '11999999999')
+user.save
 
+user = User.new(first_name: 'Rafael', last_name: 'Kasinski', email: 'rakasin@gmail.com', password: '123123',
+                phone_number: '11947887667', admin: true)
 user.save
 
 puts 'Generating twenty inflows'
