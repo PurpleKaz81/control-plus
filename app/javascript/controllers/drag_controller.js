@@ -27,7 +27,7 @@ export default class extends Controller {
 
   conclude(event) {
     let id = event.target.dataset.id
-     
+
     fetch(this.data.get("concludeUrl").replace(":id", id), {
       method: "PATCH",
       headers: {"Accept": "text/plain"}
@@ -37,5 +37,10 @@ export default class extends Controller {
         event.target.parentNode.parentNode.outerHTML = data
       })
   }
-}
 
+  highlight(event) {
+    let id = event.target.dataset.id
+
+    
+  }
+}
