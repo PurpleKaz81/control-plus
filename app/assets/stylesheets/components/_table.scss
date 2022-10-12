@@ -8,3 +8,33 @@
 .w-8rem {
   width: 8rem;
 }
+
+// Highlighting for relocated tasks
+
+tbody {
+  padding: 0px;
+  .draggable {
+    will-change: transform;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+    background-color: white;
+    width: 250px;
+    padding-left: 10px;
+    cursor: move;
+    transition: all 200ms;
+    user-select: none;
+    // margin: 10px auto;
+    position: relative;
+    &:hover {
+      &:after {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+}
+
+.over {
+transform: scale(1.1, 1.1);
+}

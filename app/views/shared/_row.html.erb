@@ -1,10 +1,12 @@
-<tr class="<%= @task.completed ? "opacity-50" : "" %>" data-id="<%= @task.id %>">
+<tr class="draggable <%= @task.completed ? "opacity-50" : "" %>" data-id="<%= @task.id %>">
+  <td>
+    <%# <a class="color-dark-green text-decoration-none mx-2"></a> %>
+    <i data-id="<%= @task.id %>" data-action="click->drag#conclude" class="d-flex justify-content-center align-items-center <%= @task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
+  </td>
   <td><%= @task.date.strftime "%d/%m/%y" %></td>
   <td><%= @task.time %></td>
   <td><%= @task.content %></td>
   <td class="d-flex gap-4 justify-content-end align-items-center">
-    <a class="color-dark-green text-decoration-none"> Concluído? </a>
-    <i data-id="<%= @task.id %>" data-action="click->drag#conclude" class="<%= @task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
     <%= link_to edit_task_path(@task), class: "text-decoration-none" do %>
       <i class="fas fa-edit" id="logo-edit"></i>
     <% end %>

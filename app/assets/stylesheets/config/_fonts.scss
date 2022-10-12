@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800;900&family=Qwitcher+Grypen&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
 $font-family: 'Inter', sans-serif;
+$body-font: $font-family;
+$headers-font: $font-family;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
