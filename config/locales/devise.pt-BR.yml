@@ -67,5 +67,5 @@ pt-BR:
   support:
     array:
       last_word_connector: " e "
-      two_words_connector: " e "
+      two_words_connector: " e/ou "
       words_connector: ", "
