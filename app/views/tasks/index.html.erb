@@ -39,7 +39,7 @@
           <td><%= task.time %></td>
           <td><%= task.content %></td>
           <td class="d-flex gap-4 justify-content-end align-items-center">
-            <a class="color-dark-green text-decoration-none"> Concluído? </a>
+            <a class="color-dark-green text-decoration-none"> OK? </a>
             <i data-id="<%= task.id %>" data-action="click->drag#conclude" class="<%= task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
             <%= link_to edit_task_path(task), class: "text-decoration-none" do %>
               <i class="fas fa-edit" id="logo-edit"></i>
@@ -54,5 +54,3 @@
   </table>
   <p class="mb-5">Obs: Para reordenar suas tarefas, clique e arraste para a ordem desejada.</p>
 </div>
-
-
