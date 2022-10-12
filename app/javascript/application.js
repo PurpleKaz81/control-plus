@@ -13,8 +13,8 @@ const swalWithBootstrapButtons = Swal.mixin({
 })
 if (window.location.href.includes('confirm=delete')) {
   swalWithBootstrapButtons.fire(
-    'Deletada!',
-    'Deletada com sucesso! :)',
+    'Deletado!',
+    'Deletado com sucesso! 🎉',
     'success'
   )
 }
