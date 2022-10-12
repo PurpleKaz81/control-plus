@@ -9,13 +9,12 @@ class User < ApplicationRecord
   has_one_attached :photo
   validate :password_complexity
   def password_complexity
-    if password.present? and not password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/)
-      errors.add :password, "Digite no mínimo 6 caracteres e use pelo menos uma letra maiúscula, uma minúscula e um símbolo"
-    end
+    return unless password.present? && !password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/)
+
+    errors.add :password,
+               'deve ter no mínimo 6 caracteres e use pelo menos uma letra maiúscula, uma minúscula e um símbolo'
   end
 end
-
-
 
 # PASSWORD_REQUIREMENTS = /\A
 #   (?={.6})
