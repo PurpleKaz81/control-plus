@@ -3,7 +3,7 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 import Swal from "sweetalert2"
-import "../javascript/main.js"
+import "../javascript/faq.js"
 
 const swalWithBootstrapButtons = Swal.mixin({
   customClass: {

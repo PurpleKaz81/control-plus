@@ -17,6 +17,7 @@ flex-direction: column;
 }
 
 /* Style the buttons that are used to open and close the faq-page body */
+
 .faq-page {
   /* background-color: #eee; */
   color: #444;
@@ -25,23 +26,29 @@ flex-direction: column;
   width: 60%;
   border: none;
   outline: none;
-  transition: 0.4s;
+  // transition: 0.4s;
   margin: auto;
 }
 .faq-body{
   margin: auto;
   /* text-align: center; */
- width: 50%;
- padding: auto;
-
+  width: 50%;
+  padding: auto;
+  font-size: 1.2em;
 }
+
+// .faq-body:after {
+//   transition-delay: 2s;
+//   transition-property: margin-right, color;
+// }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
 .active-faq,
 .faq-page:hover {
-  background-color: #bbd8c8;
+  background-color: #bbd8c852;
   border-radius: 5px;
+  transition: 200ms ease-out;
 }
 
 /* Style the faq-page panel. Note: hidden by default */
