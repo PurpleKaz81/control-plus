@@ -15,31 +15,15 @@ tbody {
     will-change: transform;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    height: 50px;
     list-style-type: none;
-    margin: 10px;
     background-color: white;
-    // color: $blue;
     width: 250px;
-    line-height: 3.2;
     padding-left: 10px;
     cursor: move;
     transition: all 200ms;
     user-select: none;
     margin: 10px auto;
     position: relative;
-    &:after {
-      content: 'drag me';
-      right: 7px;
-      font-size: 10px;
-      position: absolute;
-      cursor: pointer;
-      line-height: 5;
-      transition: all 200ms;
-      transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.50);
-      transform: translateX(120%);
-      opacity: 0;
-    }
     &:hover {
       &:after {
         opacity: 1;
