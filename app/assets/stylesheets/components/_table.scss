@@ -9,6 +9,8 @@
   width: 8rem;
 }
 
+// Highlighting for relocated tasks
+
 tbody {
   padding: 0px;
   .draggable {
@@ -19,7 +21,7 @@ tbody {
     background-color: white;
     width: 250px;
     padding-left: 10px;
-    cursor: move;
+    cursor: ns-resize;
     transition: all 200ms;
     user-select: none;
     margin: 10px auto;

@@ -37,10 +37,4 @@ export default class extends Controller {
         event.target.parentNode.parentNode.outerHTML = data
       })
   }
-
-  highlight(event) {
-    let id = event.target.dataset.id
-
-    
-  }
 }
