@@ -1,7 +1,7 @@
 <tr class="draggable <%= @task.completed ? "opacity-50" : "" %>" data-id="<%= @task.id %>">
-  <td class="d-flex justify-content-center align-items-center">
+  <td>
     <%# <a class="color-dark-green text-decoration-none mx-2"></a> %>
-    <i data-id="<%= @task.id %>" data-action="click->drag#conclude" class="<%= @task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
+    <i data-id="<%= @task.id %>" data-action="click->drag#conclude" class="d-flex justify-content-center align-items-center <%= @task.completed ? "far fa-check-square" : "far fa-square" %>" id="logo-checkbox"></i>
   </td>
   <td><%= @task.date.strftime "%d/%m/%y" %></td>
   <td><%= @task.time %></td>
