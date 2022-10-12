@@ -6,13 +6,22 @@ class User < ApplicationRecord
   has_many :tasks, dependent: :destroy
   has_many :finances, dependent: :destroy
   validates :first_name, :last_name, :phone_number, :email, presence: true
-  PASSWORD_REQUIREMENTS = /\A
-    (?={.6})
-    (?=.*\d)
-    (?=.*[a-z])
-    (?=.*[A-Z])
-    (?=.*[[:^alnum:]])
-  /x
-  validates :password, presence: true, format: PASSWORD_REQUIREMENTS
   has_one_attached :photo
+  validate :password_complexity
+  def password_complexity
+    if password.present? and not password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/)
+      errors.add :password, "Digite no mínimo 6 caracteres e use pelo menos uma letra maiúscula, uma minúscula e um símbolo"
+    end
+  end
 end
+
+
+
+# PASSWORD_REQUIREMENTS = /\A
+#   (?={.6})
+#   (?=.*\d)
+#   (?=.*[a-z])
+#   (?=.*[A-Z])
+#   (?=.*[[:^alnum:]])
+# /x
+# validates :password, presence: true, format: PASSWORD_REQUIREMENTS
