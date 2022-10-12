@@ -13,13 +13,13 @@ Task.destroy_all
 
 puts 'Generating user'
 
-user = User.new(first_name: 'teste', last_name: 'teste', email: 'teste@teste.com', password: '123123',
+user = User.new(first_name: 'teste', last_name: 'teste', email: 'teste@teste.com', password: '123123aA!',
                 phone_number: '11999999999')
 user.save
 
-user = User.new(first_name: 'Rafael', last_name: 'Kasinski', email: 'rakasin@gmail.com', password: '123123',
-                phone_number: '11947887667', admin: true)
-user.save
+# user = User.new(first_name: 'Rafael', last_name: 'Kasinski', email: 'rakasin@gmail.com', password: '123123',
+#                 phone_number: '11947887667', admin: true)
+# user.save
 
 puts 'Generating twenty inflows'
 
@@ -399,51 +399,58 @@ tarefa1 = Task.new(
 )
 tarefa1.save!
 
-# tarefa2 = Task.new(
-#   date: '25/01/2022',
-#   content: 'Visita com Uberval',
-#   user:
-# )
-# tarefa2.save!
+tarefa2 = Task.new(
+  date: '25/01/2022',
+  content: 'Visita com Uberval',
+  time: '10:37',
+  user:
+)
+tarefa2.save!
 
-# tarefa3 = Task.new(
-#   date: '25/01/2022',
-#   content: 'Visita com Uberval',
-#   user:
-# )
-# tarefa3.save!
+tarefa3 = Task.new(
+  date: '25/01/2022',
+  content: 'Visita com Uberval',
+  time: '10:37',
+  user:
+)
+tarefa3.save!
 
-# tarefa4 = Task.new(
-#   date: '25/01/2022',
-#   content: 'Visita com Uberval',
-#   user:
-# )
-# tarefa4.save!
+tarefa4 = Task.new(
+  date: '25/01/2022',
+  content: 'Visita com Uberval',
+  time: '10:37',
+  user:
+)
+tarefa4.save!
 
-# tarefa5 = Task.new(
-#   date: '25/01/2022',
-#   content: 'Visita com Uberval',
-#   user:
-# )
-# tarefa5.save!
+tarefa5 = Task.new(
+  date: '25/01/2022',
+  content: 'Visita com Uberval',
+  time: '10:37',
+  user:
+)
+tarefa5.save!
 
-# tarefa6 = Task.new(
-#   date: '10/01/2022',
-#   content: 'Sandra Feitiço',
-#   user:
-# )
-# tarefa6.save!
+tarefa6 = Task.new(
+  date: '10/01/2022',
+  content: 'Sandra Feitiço',
+  time: '10:37',
+  user:
+)
+tarefa6.save!
 
-# tarefa7 = Task.new(
-#   date: '12/01/2022',
-#   content: 'Boteco com Bino',
-#   user:
-# )
-# tarefa7.save!
+tarefa7 = Task.new(
+  date: '12/01/2022',
+  content: 'Boteco com Bino',
+  time: '10:37',
+  user:
+)
+tarefa7.save!
 
-# tarefa8 = Task.new(
-#   date: '13/01/2022',
-#   content: 'BK de café da manhã',
-#   user:
-# )
-# tarefa8.save!
+tarefa8 = Task.new(
+  date: '13/01/2022',
+  content: 'BK de café da manhã',
+  time: '10:37',
+  user:
+)
+tarefa8.save!
