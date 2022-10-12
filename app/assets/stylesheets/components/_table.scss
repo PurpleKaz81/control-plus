@@ -21,10 +21,10 @@ tbody {
     background-color: white;
     width: 250px;
     padding-left: 10px;
-    cursor: ns-resize;
+    cursor: move;
     transition: all 200ms;
     user-select: none;
-    margin: 10px auto;
+    // margin: 10px auto;
     position: relative;
     &:hover {
       &:after {
