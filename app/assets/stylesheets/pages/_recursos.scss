@@ -1,0 +1,28 @@
+.resources-page {
+  margin: auto;
+  max-width: 670px;
+}
+
+.recursos-heading {
+  padding: 20px 60px;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.recursos-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  }
+
+.resource {
+  display: flex;
+  justify-content: center;
+}
+
+.resource-text {
+  margin: 1em 0 1.5em 0;
+  text-align: justify;
+}

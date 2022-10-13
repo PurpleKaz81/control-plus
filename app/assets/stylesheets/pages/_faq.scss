@@ -1,19 +1,18 @@
-.faq-heading{
+.faq-heading {
   border-bottom: #777;
   padding: 20px 60px;
   display: flex;
   justify-content: center;
 }
-.faq-container{
-display: flex;
-justify-content: center;
-flex-direction: column;
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.hr-line{
+.hr-line {
   width: 60%;
   margin: 0.25em auto;
-
 }
 
 /* Style the buttons that are used to open and close the faq-page body */
@@ -29,7 +28,7 @@ flex-direction: column;
   // transition: 0.4s;
   margin: auto;
 }
-.faq-body{
+.faq-body {
   margin: auto;
   /* text-align: center; */
   width: 50%;
