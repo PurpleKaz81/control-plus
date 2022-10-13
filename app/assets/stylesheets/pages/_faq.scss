@@ -37,10 +37,10 @@ flex-direction: column;
   font-size: 1.2em;
 }
 
-// .faq-body:after {
-//   transition-delay: 2s;
-//   transition-property: margin-right, color;
-// }
+.faq-text {
+  margin-top: 1em;
+  text-align: justify;
+}
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
