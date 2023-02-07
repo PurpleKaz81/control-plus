@@ -14,24 +14,11 @@
   justify-content: center;
   border-radius: 10px;
 }
-@media (max-width:641px)  {
-  .navigation {
-    height: 100px;
-  }
-}
-
 .navigation ul
 {
   display: flex;
   width: 350px;
 }
-
-// @media (max-width:641px)  {
-//   .navigation ul {
-//     width: auto;
-//   }
-// }
-
 .navigation ul li
 {
   position: relative;

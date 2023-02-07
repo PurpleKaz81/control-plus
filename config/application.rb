@@ -19,8 +19,5 @@ module ControlPlus
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
-    config.hosts << "b7a0-2804-d59-8c11-900-5d45-80b0-aad5-37c2.sa.ngrok.io"
-
   end
 end
