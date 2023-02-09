@@ -1,20 +1,20 @@
 <!--Hey! This is the original version
 of Simple CSS Waves-->
 <div class="container">
-  <div class="main-grid">
-      <div class="main-card-1">
-        <h2 class="typing-demo mb-4">Controle suas despesas e gerencie suas tarefas diárias</h2>
-        <p>Faça a gestão de tarefas da forma mais eficiente para a sua rotina.
-        Gerencie com precisão todas as despesas dos seus cartões de crédito, contas de bancos. </p>
-        <h3 class="mt-4"> Tenha o controle total da sua vida! </h3>
-        <div>
-        <%= link_to "Cadastre-se", new_user_registration_path, class: "btn btn1 col-sm-3 col-xs-12 mt-4" %>
-        </div>
+  <div class="main-grid row">
+    <div class="main-card-1 col-12 col-md-8 col-sm-12">
+      <h2 class="typing-demo mb-4"> Controle suas despesas e gerencie suas tarefas diárias</h2>
+      <p >Faça a gestão de tarefas da forma mais eficiente para a sua rotina.
+      Gerencie com precisão todas as despesas dos seus cartões de crédito, contas de bancos. </p>
+      <h3 class="mt-4"> Tenha o controle total da sua vida! </h3>
+      <div>
+      <%= link_to "Cadastre-se", new_user_registration_path, class: "btn btn1 col-sm-3 col-xs-12 mt-4" %>
       </div>
+    </div>
 
-      <div class="main-card-2">
-        <%= image_tag 'home.jpg' %>
-      </div>
+    <div class="main-card-2 col-12 col-md-4 col-sm-12">
+      <%= image_tag 'home.jpg', class: "img-fluid" %>
+    </div>
   </div>
 
   <main class="cards">

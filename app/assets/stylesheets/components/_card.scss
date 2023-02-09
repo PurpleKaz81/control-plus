@@ -73,9 +73,10 @@
   box-shadow: 20px 20px 50px -30px #020202;
 
   img {
-    width: 250px;
+    width: 100%;
     border-radius: 5%;
     height: 300px;
+    object-fit: cover;
   }
 }
 
