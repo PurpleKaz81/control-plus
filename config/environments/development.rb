@@ -67,4 +67,8 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # config.hosts << "control-pluss.herokuapp.com/"
+
+  # config.hosts << /[a-z0-9]+\.herokuapp\.com/
 end
