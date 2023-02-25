@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="d-grid d-md-flex justify-content-center justify-content-md-between gap-2 navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="/dashboard">
     <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
   </a>
@@ -54,7 +54,12 @@
       <% end %>
     </div>
   <% else %>
-      <ul class="navbar-nav">
+    <div class="d-block d-md-none">
+      <%= link_to "Cadastre-se", new_user_registration_path, class: "nav-link btn1 btn-full" %>
+  
+      <%= link_to "Entrar", new_user_session_path, class: "nav-link btn2 btn-full" %>
+    </div>
+      <ul class="navbar-nav d-none d-md-flex">
         <li class="nav-item">
           <%= link_to "Entrar", new_user_session_path, class: "nav-link btn2" %>
         </li>
