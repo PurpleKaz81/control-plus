@@ -14,6 +14,13 @@
 
   }
 
+  @media (max-width:641px)  {
+    .footer-links {
+      display: flex;
+      gap: 5px;
+    }
+  }
+
   .footer-social {
     display: flex;
     align-items: center;
