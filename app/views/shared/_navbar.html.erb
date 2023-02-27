@@ -1,7 +1,16 @@
-<div class="d-grid d-md-flex justify-content-center justify-content-md-between gap-2 navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="position-relative d-grid d-md-flex justify-content-center justify-content-md-between gap-2 navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="/dashboard">
     <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
   </a>
+  <%= link_to edit_user_registration_path, class: "d-block d-md-none position-absolute top-0 end-0 p-4" do %>
+    <div class="nav-item">
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
+      <% else  %>
+        <i class="fa-solid fa-circle-user"></i>
+      <% end %>
+    </div>
+  <% end %>
   <% if user_signed_in? %>
     <div class="navbar-sign-in">
       <div id="navbar-elements" class="navigation" data-controller="navbar">
@@ -30,7 +39,7 @@
               <span class="text">Finanças</span>
             </a>
           </li>
-          <div class="indicator"></div>
+          <!-- <div class="indicator"></div> -->
         </ul>
       </div>
     </div>
@@ -43,15 +52,7 @@
             <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font-avatar"> Sair</span></i>
           <% end %>
       </div>
-      <%= link_to edit_user_registration_path do %>
-        <div class="nav-item">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
-          <% else  %>
-            <i class="fa-solid fa-circle-user"></i>
-          <% end %>
-        </div>
-      <% end %>
+      
     </div>
   <% else %>
     <div class="d-block d-md-none">

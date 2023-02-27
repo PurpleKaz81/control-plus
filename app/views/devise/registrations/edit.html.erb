@@ -1,49 +1,51 @@
-<div class="container col-6">
-  <h2 class="mb-5 mt-5 text-center"><strong>Bem-vindo, <%= current_user.first_name %>!</strong></h2>
-  <div class="edit-user  mt-5 mb-5">
-    <div class="container">
-      <h3 class="mb-3">Edite Seu Perfil</h3>
+<div class="container">
+  <div class="col-12 col-md-6 mx-auto">
+    <h2 class="mb-5 mt-5 text-center"><strong>Bem-vindo, <%= current_user.first_name %>!</strong></h2>
+    <div class="edit-user  mt-5 mb-5">
+      <div class="container">
+        <h3 class="mb-3">Edite Seu Perfil</h3>
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}, html: { method: :put }) do |f| %>
-        <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}, html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-        <div class="form-inputs">
+          <div class="form-inputs">
 
-          <%= f.input :first_name, label: "Nome", placeholder: 'Digite seu nome',
-                      required: false,
-                      autofocus: true %>
-          <%= f.input :last_name, label: "Sobrenome", placeholder: 'Digite seu sobrenome',
-                      required: false,
-                      autofocus: true %>
-          <%= f.input :phone_number, label: "Telefone", placeholder: 'Digite seu telefone',
-                      required: false,
-                      autofocus: true %>
-          <%= f.input :photo, label: "Foto",
-                      required: false,
-                      as: :file %>
-          <%#= f.input :email, required: true, autofocus: true %>
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-          <% end %>
-          <%= f.input :current_password, label: "Senha atual",
-                      hint: "Precisamos de sua atual senha para efetuar mudanças",
-                      required: true,
-                      input_html: { autocomplete: "current-password" } %>
-          <%= f.input :password, label: "Nova senha",
-                      hint: "Deixe em branco se não quiser mudar sua senha",
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation, label: "Confirme sua nova senha",
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
+            <%= f.input :first_name, label: "Nome", placeholder: 'Digite seu nome',
+                        required: false,
+                        autofocus: true %>
+            <%= f.input :last_name, label: "Sobrenome", placeholder: 'Digite seu sobrenome',
+                        required: false,
+                        autofocus: true %>
+            <%= f.input :phone_number, label: "Telefone", placeholder: 'Digite seu telefone',
+                        required: false,
+                        autofocus: true %>
+            <%= f.input :photo, label: "Foto",
+                        required: false,
+                        as: :file %>
+            <%#= f.input :email, required: true, autofocus: true %>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+            <%= f.input :current_password, label: "Senha atual",
+                        hint: "Precisamos de sua atual senha para efetuar mudanças",
+                        required: true,
+                        input_html: { autocomplete: "current-password" } %>
+            <%= f.input :password, label: "Nova senha",
+                        hint: "Deixe em branco se não quiser mudar sua senha",
+                        required: false,
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation, label: "Confirme sua nova senha",
+                        required: false,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Salvar", class: "btn btn1" %>
+          </div>
+        <% end %>
+        <div class="text-center mb-4">
+          <h5>Precisa cancelar sua conta?</h5>
+          <%= link_to "Cancelar minha conta", destroy_user_path(resource_name), method: :delete, data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } %>
         </div>
-        <div class="form-actions">
-          <%= f.button :submit, "Salvar", class: "btn btn1" %>
-        </div>
-      <% end %>
-      <div class="text-center mb-4">
-        <h5>Precisa cancelar sua conta?</h5>
-        <%= link_to "Cancelar minha conta", destroy_user_path(resource_name), method: :delete, data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } %>
       </div>
     </div>
   </div>
