@@ -20,38 +20,47 @@
   </div>
   <div class="d-flex align-items-center justify-content-between mb-1">
     <h2><strong>Saídas</strong></h2>
-    <%= link_to "Nova Saída", new_outflow_finances_path, class: "btn btn1 col-2 mx-0" %>
+    <%= link_to new_outflow_finances_path, class: "btn btn-simple col-2 mx-0" do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
   </div>
-  <table class="table table-striped table-hover">
-    <thead class="thead">
-      <tr>
-        <th scope="col">Data</th>
-        <th scope="col">Descrição</th>
-        <th scope="col" class="w-8rem text-center">Valor</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @outflows.reverse.each do |outflow| %>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="thead">
         <tr>
-          <td><%= outflow.date.strftime "%d/%m/%y" %></td>
-          <td><%= outflow.description %></td>
-          <td class="w-8rem"><span class="me-2">R$</span><span><%= number_to_currency(outflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
-          <td class="d-flex gap-4 justify-content-end align-items-center"><%= link_to edit_outflow_path(outflow), class: "text-decoration-none mx-2" do %>
-              <i class="fas fa-edit" id="logo-edit"></i>
-            <% end %>
-          <%= button_to finance_path(outflow), method: :delete, class: "me-2 bg-transparent", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
-              <i class="fas fa-trash-alt" id="logo-trash"></i>
-            <% end %></td>
+          <th scope="col">Data</th>
+          <th scope="col">Descrição</th>
+          <th scope="col" class="w-8rem text-center">Valor</th>
+          <th scope="col"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @outflows.reverse.each do |outflow| %>
+          <tr>
+            <td><%= outflow.date.strftime "%d/%m/%y" %></td>
+            <td><%= outflow.description %></td>
+            <td class="w-8rem"><span class="me-2">R$</span><span><%= number_to_currency(outflow.value, unit: "", separator: ",", delimiter: ".") %></span></td>
+            <td>
+              <div class="d-flex gap-4 justify-content-end align-items-center">
+                <%= link_to edit_outflow_path(outflow), class: "text-decoration-none mx-2" do %>
+                  <i class="fas fa-edit" id="logo-edit"></i>
+                <% end %>
+                <%= button_to finance_path(outflow), method: :delete, class: "me-2 bg-transparent", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
+                  <i class="fas fa-trash-alt" id="logo-trash"></i>
+                <% end %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 
   <div class="totals mb-2">
   <% if params[:search].present? %>
     <p class="mt-3 mb-2"><strong>TOTAL DE SAÍDAS (filtrado)</strong></p>
-    <div class="row col-2">
+    <div class="row col-5 row col-md-3">
       <div class="card-body-1">
         <p>R$ <%= number_to_currency(@total_filtered, unit: "", separator: ",", delimiter: ".") %></p>
       </div>
@@ -59,14 +68,14 @@
     <% end %>
 
     <p class="mt-3 mb-2"><strong>TOTAL DE SAÍDAS</strong></p>
-    <div class="row col-2 mt-2">
+    <div class="row col-5 row col-md-3 mt-2">
       <div class="card-body-1">
         <p>R$ <%= number_to_currency(@outflow_sum, unit: "", separator: ",", delimiter: ".") %></p>
       </div>
     </div>
 
     <p class="mt-3 mb-2"><strong>SEU TOTAL</strong></p>
-    <div class="row col-2 mt-2">
+    <div class="row col-5 row col-md-3 mt-2">
       <div class="card-body-1">
       <% if @total.negative? %>
         <p class="red blink_me">R$ <%= number_to_currency(@total, unit: "", separator: ",", delimiter: ".") %></p>

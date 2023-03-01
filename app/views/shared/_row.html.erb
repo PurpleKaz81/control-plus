@@ -6,12 +6,14 @@
   <td><%= @task.date.strftime "%d/%m/%y" %></td>
   <td><%= @task.time %></td>
   <td><%= @task.content %></td>
-  <td class="d-flex gap-4 justify-content-end align-items-center">
-    <%= link_to edit_task_path(@task), class: "text-decoration-none" do %>
-      <i class="fas fa-edit" id="logo-edit"></i>
-    <% end %>
-    <%= button_to task_path(@task), method: :delete, class: "text-danger me-2", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
-      <i class="fas fa-trash-alt" id="logo-trash"></i>
-    <% end %>
+  <td>
+    <div class="d-flex gap-4 justify-content-end align-items-center">
+      <%= link_to edit_task_path(@task), class: "text-decoration-none" do %>
+        <i class="fas fa-edit" id="logo-edit"></i>
+      <% end %>
+      <%= button_to task_path(@task), method: :delete, class: "text-danger me-2", data: { turbo: false, controller: 'sweetalert', action: 'click->sweetalert#showAlert' } do %>
+        <i class="fas fa-trash-alt" id="logo-trash"></i>
+      <% end %>
+    </div>
   </td>
 </tr>
