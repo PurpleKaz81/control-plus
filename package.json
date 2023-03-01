@@ -1,6 +1,5 @@
 {
   "name": "app",
-  "private": "true",
   "engines": {
     "node": "14.19.1",
     "yarn": "1.22.19"
@@ -19,5 +18,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "yarn": "^1.22.19"
   }
 }
