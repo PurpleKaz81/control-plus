@@ -4,7 +4,7 @@
   </a>
   <%= link_to edit_user_registration_path, class: "d-block d-md-none position-absolute top-0 end-0 p-4" do %>
     <div class="nav-item">
-      <% if current_user.photo.attached? %>
+      <% if current_user && current_user.photo.attached? %>
         <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
       <% else  %>
         <i class="fa-solid fa-circle-user"></i>
