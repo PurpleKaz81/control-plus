@@ -88,7 +88,7 @@
   margin-top: 15px;
   letter-spacing: .05em;
   transition: .5s;
-  opacity: 1;
+  opacity: 0;
   // transform: translateY(20px) scale(.25);
   transform: translateY(20px) scale(1);
 }
@@ -140,13 +140,13 @@
 .navigation ul li:nth-child(2).active ~ .indicator,
 .navigation ul li:nth-child(2):hover ~ .indicator
 {
-  transform: translateX(calc(130px * 1));
+  transform: translateX(calc(135px * 1));
   background: #bbd8c8;
 }
 .navigation ul li:nth-child(3).active ~ .indicator,
 .navigation ul li:nth-child(3):hover ~ .indicator
 {
-  transform: translateX(calc(280px));
+  transform: translateX(calc(270px));
   background: #bbd8c8;
 }
 

@@ -20,18 +20,20 @@ if (window.location.href.includes('confirm=delete')) {
   )
 }
 
-// document.addEventListener('turbolinks:load', () => {
-//   console.log("dude")
+console.log("HEy")
 
-//   let main_navigation = document.getElementsByClassName('main-nav');
-//   let main_indicator = document.getElementById('indicator');
+document.addEventListener('turbolinks:load', () => {
+  console.log("dude")
 
-//   main_navigation.map(el => {
+  let main_navigation = document.getElementsByClassName('main-nav');
+  let main_indicator = document.getElementById('indicator');
 
-//     console.log('WORKS', el);
+  main_navigation.map(el => {
 
-//     el.addEventListener('mouseover', function() {
-//       console.log('Event triggered');
-//     });
-//   });
-// });
+    console.log('WORKS', el);
+
+    el.addEventListener('mouseover', function() {
+      console.log('Event triggered');
+    });
+  });
+});

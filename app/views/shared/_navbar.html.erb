@@ -78,12 +78,7 @@
           </li>
           <!--
             <li class="list d-none d-lg-flex">
-              <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu-avatar" do %>
-                <span class="icon">
-                  <i class="fa-solid fa-solid fa-arrow-right-from-bracket"></i>
-                </span>
-                <span class="text"> Sair</span>
-              <% end %>
+              
             </li>
           -->
           <div class="indicator" id="indicator"></div>
@@ -92,9 +87,18 @@
     </div>
     <div class="flex text-end ">
       <div class="d-none d-lg-flex align-items-center">
-          <%= link_to  edit_user_registration_path, class: "nav-menu" do %>
-            <span class="menu-font color-dark-green"><strong><%= "#{current_user.first_name} #{current_user.last_name}" %></strong></span>
-          <% end %>
+          <div class="d-flex flex-column">
+            <%= link_to  edit_user_registration_path, class: "nav-menu" do %>
+              <span class="menu-font color-dark-green"><strong><%= "#{current_user.first_name} #{current_user.last_name}" %></strong></span>
+            <% end %>
+
+            <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu-avatar" do %>
+              <span class="icon">
+                <i class="fa-solid fa-solid fa-arrow-right-from-bracket"></i>
+              </span>
+              <span class="text"> Sair</span>
+            <% end %>
+          </div>
 
            <%= link_to edit_user_registration_path, class: "d-flex p-4" do %>
             <div class="nav-item">
