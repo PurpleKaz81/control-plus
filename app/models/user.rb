@@ -3,11 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   has_many :tasks, dependent: :destroy
   has_many :finances, dependent: :destroy
-  validates :first_name, :last_name, :phone_number, :email, presence: true
   has_one_attached :photo
-  validate :password_complexity
+
+  validates :first_name, :last_name, :phone_number, :email, presence: true  
+  # validate :password_complexity, on: :create
+
   def password_complexity
     return unless password.present? && !password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/)
 

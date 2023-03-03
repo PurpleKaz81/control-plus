@@ -69,14 +69,15 @@
 
 .main-card-2 {
   width: 300px;
+  height: 330px;
   border-radius: 12px;
   box-shadow: 20px 20px 50px -30px #020202;
   padding: 0px;
 
   img {
     width: 100%;
+    height: 100%;
     border-radius: 5%;
-    height: 300px;
     object-fit: cover;
   }
 }
@@ -98,6 +99,18 @@ main.cards section.card {
     border-radius: 12px;
     height: 300px;
     margin-left: 32px;
+}
+
+@media (max-width:641px)  {
+  main.cards section.card {
+    height: auto;
+  }
+}
+
+@media (max-width:990px)  {
+  main.cards section.card {
+    height: 420px;
+  }
 }
 
 main.cards section.card:first-child {

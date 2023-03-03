@@ -1,22 +1,59 @@
-<div class="position-relative d-grid d-md-flex justify-content-center justify-content-md-between gap-2 navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="/dashboard">
+<div class="
+  position-relative
+  d-grid
+  d-sm-flex
+  d-md-grid
+  d-lg-flex
+  justify-content-center
+  justify-content-sm-center
+  justify-content-md-center
+  justify-content-lg-between
+  gap-2
+  navbar
+  navbar-expand-sm
+  navbar-light navbar-lewagon
+  ">
+
+  <a class="navbar-brand d-none d-xs-none d-sm-none d-md-none d-lg-flex" href="/dashboard" style="margin-left: 60px;">
     <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
   </a>
-  <%= link_to edit_user_registration_path, class: "d-block d-md-none position-absolute top-0 end-0 p-4" do %>
-    <div class="nav-item">
-      <% if current_user && current_user.photo.attached? %>
-        <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" %>
-      <% else  %>
-        <i class="fa-solid fa-circle-user"></i>
-      <% end %>
-    </div>
-  <% end %>
+
+  <div class="d-none d-xs-none d-sm-none d-md-flex d-lg-none justify-content-center">
+    <a class="navbar-brand" href="/dashboard" style="margin-left: 60px;">
+      <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
+    </a>
+    <%= link_to edit_user_registration_path, class: "d-block d-sm-none d-md-block p-3" do %>
+      <div class="nav-item">
+        <% if current_user && current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" rescue nil %>
+        <% else  %>
+          <i class="fa-solid fa-circle-user"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="d-flex d-xs-flex d-sm-flex d-md-none d-lg-none">
+    <a class="navbar-brand" href="/dashboard" style="margin-left: 20px;">
+      <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png"/>
+    </a>
+    <%= link_to edit_user_registration_path, class: "d-block d-sm-none d-md-block position-absolute top-0 end-0 p-4" do %>
+      <div class="nav-item">
+        <% if current_user && current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" rescue nil %>
+        <% else  %>
+          <i class="fa-solid fa-circle-user"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
   <% if user_signed_in? %>
     <div class="navbar-sign-in">
       <div id="navbar-elements" class="navigation" data-controller="navbar">
         <ul>
           <li class="list <%= controller_name == 'pages' && action_name == 'dashboard' ? "active" : "" %>">
-            <a href="<%= dashboard_path %>">
+            <a href="<%= dashboard_path %>" class="main-nav">
               <span class="icon">
                 <i class="fa-solid fa-house"></i>
               </span>
@@ -24,7 +61,7 @@
             </a>
           </li>
           <li class="list <%= controller_name == 'tasks' ? "active" : "" %>">
-            <a href="<%= tasks_path %>">
+            <a href="<%= tasks_path %>" class="main-nav">
               <span class="icon">
                 <i class="fa-solid fa-list-check"></i>
               </span>
@@ -32,24 +69,41 @@
             </a>
           </li>
           <li class="list <%= controller_name == 'finances' ? "active" : "" %>" >
-            <a href="<%= finances_path %>">
+            <a href="<%= finances_path %>" class="main-nav">
               <span class="icon">
                 <i class="fa-solid fa-brazilian-real-sign"></i>
               </span>
               <span class="text">Finanças</span>
             </a>
           </li>
-          <!-- <div class="indicator"></div> -->
+          <!--
+            <li class="list d-none d-lg-flex">
+              <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu-avatar" do %>
+                <span class="icon">
+                  <i class="fa-solid fa-solid fa-arrow-right-from-bracket"></i>
+                </span>
+                <span class="text"> Sair</span>
+              <% end %>
+            </li>
+          -->
+          <div class="indicator" id="indicator"></div>
         </ul>
       </div>
     </div>
     <div class="flex text-end ">
-      <div class="d-none d-lg-block">
+      <div class="d-none d-lg-flex align-items-center">
           <%= link_to  edit_user_registration_path, class: "nav-menu" do %>
             <span class="menu-font color-dark-green"><strong><%= "#{current_user.first_name} #{current_user.last_name}" %></strong></span>
           <% end %>
-          <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-menu-avatar" do %>
-            <i class="fa-solid fa-solid fa-arrow-right-from-bracket"><span class="menu-font-avatar"> Sair</span></i>
+
+           <%= link_to edit_user_registration_path, class: "d-flex p-4" do %>
+            <div class="nav-item">
+              <% if current_user && current_user.photo.attached? %>
+                <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar" rescue nil %>
+              <% else  %>
+                <i class="fa-solid fa-circle-user"></i>
+              <% end %>
+            </div>
           <% end %>
       </div>
       
@@ -70,3 +124,4 @@
       </ul>
   <% end %>
 </div>
+
