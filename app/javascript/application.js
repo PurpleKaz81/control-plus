@@ -19,3 +19,21 @@ if (window.location.href.includes('confirm=delete')) {
     'success'
   )
 }
+
+console.log("HEy")
+
+document.addEventListener('turbolinks:load', () => {
+  console.log("dude")
+
+  let main_navigation = document.getElementsByClassName('main-nav');
+  let main_indicator = document.getElementById('indicator');
+
+  main_navigation.map(el => {
+
+    console.log('WORKS', el);
+
+    el.addEventListener('mouseover', function() {
+      console.log('Event triggered');
+    });
+  });
+});

@@ -116,6 +116,33 @@
   }
 }
 
+.menu-signout {
+  display: block;
+  text-decoration: none;
+  color: #0A522D;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  width: 200px;
+
+  i {
+    font-size: 28px;
+  }
+
+  i:hover {
+    color: #69947e;
+  }
+
+  &:hover {
+    color: #69947e;
+  }
+}
+
+@media (min-width:641px)  {
+  .menu-signout {
+    display: none;
+  }
+}
+
 .menu-font-avatar {
   font-family: 'Inter', sans-serif;
   font-size: 14px;

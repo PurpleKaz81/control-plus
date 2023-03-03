@@ -16,6 +16,10 @@
     <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
       <%= render "shared/navbar" %>
     <% end %>
+
+    <%= notice ? "<div class='notice notice-info'><strong>#{notice}</strong></div>".html_safe : '' %>
+    <%= alert ? "<div class='notice notice-danger'><strong>#{alert}</strong></div>".html_safe : '' %>
+
     <%= yield %>
     <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
       <%= render "shared/footer" %>

@@ -21,6 +21,15 @@
   }
 }
 
+@media (max-width:990px)  {
+  .typing-demo {
+    width: 18.5ch;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    margin-right: 10px;
+  }
+}
+
 @keyframes typing {
   from {
     width: 0
