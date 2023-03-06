@@ -1,7 +1,7 @@
 {
   "name": "app",
   "engines": {
-    "node": "16.15.1",
+    "node": "16.18.1",
     "yarn": "1.22.19"
   },
   "dependencies": {
@@ -15,9 +15,6 @@
     "typed.js": "^2.0.12",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
-  },
-  "resolutions": {
-    "**/**/node": "16.x"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
