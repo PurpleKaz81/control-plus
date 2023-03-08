@@ -1,7 +1,7 @@
 {
   "name": "app",
   "engines": {
-    "node": "16.18.1",
+    "node": "16.x.x",
     "yarn": "1.22.19"
   },
   "dependencies": {
