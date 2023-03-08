@@ -9,7 +9,7 @@
     <%= favicon_link_tag asset_path('favicon1.png') %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
@@ -17,8 +17,8 @@
       <%= render "shared/navbar" %>
     <% end %>
 
-    <%= notice ? "<div class='notice notice-info'><strong>#{notice}</strong></div>".html_safe : '' %>
-    <%= alert ? "<div class='notice notice-danger'><strong>#{alert}</strong></div>".html_safe : '' %>
+    <% notice ? "<div class='notice notice-info'><strong>#{notice}</strong></div>".html_safe : '' %>
+    <% alert ? "<div class='notice notice-danger'><strong>#{alert}</strong></div>".html_safe : '' %>
 
     <%= yield %>
     <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
