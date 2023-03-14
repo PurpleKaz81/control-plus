@@ -3,9 +3,9 @@ class TasksController < ApplicationController
 
   def index
     @tasks = if params[:search].present?
-               Task.where('content ILIKE ?', "%#{params[:search]}%")
+               Task.where('content ILIKE ?', "%#{params[:search]}%").order(position: :asc)
              else
-               current_user.tasks
+               current_user.tasks.order(position: :asc)
              end
   end
 

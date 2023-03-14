@@ -121,6 +121,13 @@ i {
   justify-content: end;
 }
 
+@media (max-width:641px)  {
+  .btn-finance {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
 .btn-delete {
   background-color: #0A522D;
   color: #fff;
