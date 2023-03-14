@@ -1,12 +1,12 @@
 <div class="container">
-  <a href="<%= root_path %>" class="d-block d-md-none position-fixed top-0 start-0 p-3 bg-light">
+  <a href="<%= root_path %>" class="d-none d-md-none position-fixed top-0 start-0 p-3 bg-light">
     <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png" />
   </a>
 
   <div class="row justify-content-center mt-5 mb-5">
-    <section class="col-12 col-sm-6 col-md-6 mt-5 mb-5">
+    <section class="col-12 col-sm-6 col-md-10 col-lg-6 mt-5 mb-5">
       <div class="form-container">
-        <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png" class="d-none d-md-block" />
+        <img src="https://i.ibb.co/XtzYw1p/Control-4-removebg-preview.png" class="d-block" />
           <h3 class="d-flex">Cadastre-se Gratuitamente</h3>
 
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
