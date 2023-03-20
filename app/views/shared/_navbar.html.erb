@@ -78,10 +78,15 @@
           </li>
           <!--
             <li class="list d-none d-lg-flex">
-              
             </li>
           -->
-          <div class="indicator" id="indicator"></div>
+          <% if controller_name == 'finances' && (action_name == 'inflow' || action_name == 'outflow') %>
+            <div class="indicator d-none d-md-none d-lg-block" id="indicator" style="left: 310px;"></div>
+            <div class="indicator d-none d-md-block d-lg-none" id="indicator" style="left: 305px;"></div>
+            <div class="indicator d-block d-md-none d-lg-none" id="indicator" style="left: 210px;"></div>
+          <% else %>
+            <div class="indicator" id="indicator"></div>
+          <% end %>
         </ul>
       </div>
     </div>

@@ -6,17 +6,27 @@ export default class extends Controller {
     const elementsDiv = document.querySelector("#navbar-elements");
     const list = document.querySelectorAll('.list');
     const indicator = document.getElementById('indicator');
+    let current_focus = "0px";
     const correct_pos = window.innerWidth < 600 ? 35 : 30;
     let last_target = null;
 
     const focusIndicator = () => {
       if (currentlyActive) {
         let left_pos = currentlyActive.offsetLeft;
+        current_focus = left_pos - correct_pos;
 
         indicator.style.transform = `translateX(calc(${left_pos - correct_pos}px))`;
       }
     }
-    focusIndicator();
+
+    if (
+      window.location.pathname == "/finances/inflow"
+      || window.location.pathname == "/finances/outflow"
+      ) {
+      // DISABLE ANIMATION
+    } else {
+      focusIndicator();
+    }
 
     elementsDiv.addEventListener('mouseout', () => {
       list.forEach((item) => {

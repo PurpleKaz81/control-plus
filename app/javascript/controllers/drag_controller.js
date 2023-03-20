@@ -6,7 +6,9 @@ import Sortable from "sortablejs"
 export default class extends Controller {
   connect() {
     this.sortable = Sortable.create(this.element, {
-      onEnd: this.end.bind(this)
+      onEnd: this.end.bind(this),
+      chosenClass: "draggable-choosed",
+      dragClass: "draggable-item-drag"
     })
   }
 
