@@ -33,6 +33,20 @@ tbody {
       }
     }
   }
+
+  .draggable-choosed {
+    background-color: #666;
+    color: #fff !important;
+  }
+
+  .draggable-choosed:nth-of-type(odd) > * {
+    color: #fff !important;
+  }
+
+  .draggable-item-drag {
+    color: #fff !important;
+    background-color: rgb(4, 128, 72);
+  }
 }
 
 .over {

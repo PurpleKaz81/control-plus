@@ -46,7 +46,7 @@
           <td><%= task.time %></td>
           <td><%= task.content %></td>
           <td>
-            <div class="d-flex gap-4 justify-content-end align-items-center">
+            <div class="d-flex flex-column flex-md-row gap-4 justify-content-end align-items-center">
               <%= link_to edit_task_path(task), class: "text-decoration-none" do %>
                 <i class="fas fa-edit" id="logo-edit"></i>
               <% end %>
