@@ -111,12 +111,12 @@ If you'd like a step-by-step guide, you can find one [here](https://app.tango.us
 
 ## Contributing
 
-If you want to contribute to ControlPlus.pro, please fork the repository and make your changes. When you are ready to submit your changes, create a pull request with a detailed description of the changes you made.
+If you want to contribute to Control+, please fork the repository and make your changes. When you are ready to submit your changes, create a pull request with a detailed description of the changes you made.
 
 ## Credits
 
-ControlPlus.pro was created by [Rafael Kasinski](https://github.com/PurpleKaz81), [Suzane Andrade](https://github.com/suzaneandrade100), and [Gabriel Soares](https://github.com/gabrielsoares1) during the Le Wagon São Paulo bootcamp, between July and September 2022. Further contributions were made by [Fabian Carlos](https://github.com/fabiancarlos)
+Control+ was created by [Rafael Kasinski](https://github.com/PurpleKaz81), [Suzane Andrade](https://github.com/suzaneandrade100), and [Gabriel Soares](https://github.com/gabrielsoares1) during the Le Wagon São Paulo bootcamp, between July and September 2022. Further contributions were made by [Fabian Carlos](https://github.com/fabiancarlos)
 
 ## License
 
-ControlPlus.pro is open source software licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+Control+ is open source software licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
