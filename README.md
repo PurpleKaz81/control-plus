@@ -35,7 +35,20 @@ This web application can be accessed directly at [https://controlplus.pro](https
 4. Yarn 1.22.19
 5. PostgreSQL
 
-### Setting up the project
+### Dependencies
+
+In addition to the prerequisites, you'll need to install the following external libraries or packages:
+
+- [Devise](https://github.com/heartcombo/devise)
+- [Simple Form](https://github.com/heartcombo/simple_form)
+
+### Configuration
+
+No special configuration is required for this application.
+
+### Running the project locally
+
+To run the project locally, follow these steps:
 
 1. Clone the repository to your local machine: `git clone https://github.com/your_username/your_project.git`
 2. Change into the project directory: `cd your_project`
@@ -46,72 +59,19 @@ This web application can be accessed directly at [https://controlplus.pro](https
 
 Now you can access the application in your web browser at `http://localhost:3000`
 
-## Deployment
+### Deployment
 
 The project is deployed to Heroku. To deploy your own version of the project, follow these steps:
 
 1. Install the Heroku CLI and log in with your Heroku account: `heroku login`
 2. Create a new Heroku app: `heroku create your-app-name`
 3. Set up your app's environment variables in Heroku:
-
-    ```bash
+    ```
     heroku config:set RAILS_MASTER_KEY=`cat config/master.key`
     ```
-
 4. Deploy your app to Heroku: `git push heroku main`
 5. Run database migrations on Heroku: `heroku run rails db:migrate`
 
 Your application should now be live on Heroku.
 
 If you encounter any issues, please refer to the [Heroku documentation](https://devcenter.heroku.com/articles/getting-started-with-rails6) for further guidance.
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
