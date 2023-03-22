@@ -1,6 +1,6 @@
 # Control+
 
-Control+ is a personal financial management tool in Portuguese. It provides users with a straightforward and responsive platform to manage their tasks and finances.
+[Control+](https://controlplus.pro) is a personal financial management tool in Portuguese. It provides users with a straightforward and responsive platform to manage their tasks and finances.
 
 ## Features
 
@@ -65,7 +65,6 @@ In addition to the prerequisites, you'll need to install the following external 
 - [Typed.js](https://mattboldt.com/demos/typed-js/) version 2.0.12
 - [Webpack](https://webpack.js.org/) version 5.74.0
 - [Webpack-cli](https://webpack.js.org/api/cli/) version 4.10.0
-
 
 ### Configuration
 
