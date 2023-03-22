@@ -66,9 +66,11 @@ The project is deployed to Heroku. To deploy your own version of the project, fo
 1. Install the Heroku CLI and log in with your Heroku account: `heroku login`
 2. Create a new Heroku app: `heroku create your-app-name`
 3. Set up your app's environment variables in Heroku:
-    ```
+
+    ```bash
     heroku config:set RAILS_MASTER_KEY=`cat config/master.key`
     ```
+
 4. Deploy your app to Heroku: `git push heroku main`
 5. Run database migrations on Heroku: `heroku run rails db:migrate`
 
