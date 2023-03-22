@@ -55,7 +55,17 @@ In addition to the prerequisites, you'll need to install the following external 
 
 - [Devise](https://github.com/heartcombo/devise)
 - [Simple Form](https://github.com/heartcombo/simple_form)
-- [Stimulus](https://stimulus.hotwire.dev/)
+- [Stimulus](https://stimulus.hotwire.dev/) version 3.1.0
+- [@hotwired/turbo-rails](https://turbo.hotwire.dev/) version 7.1.3
+- [Bootstrap](https://getbootstrap.com/) version 5.2.0
+- [Popper.js](https://popper.js.org/) version 2.11.6
+- [Sortable.js](https://github.com/SortableJS/Sortable) version 1.15.0
+- [Sweetalert](https://sweetalert.js.org/) version 2.1.2
+- [Sweetalert2](https://sweetalert2.github.io/) version 11.4.32
+- [Typed.js](https://mattboldt.com/demos/typed-js/) version 2.0.12
+- [Webpack](https://webpack.js.org/) version 5.74.0
+- [Webpack-cli](https://webpack.js.org/api/cli/) version 4.10.0
+
 
 ### Configuration
 
