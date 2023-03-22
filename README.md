@@ -1,6 +1,6 @@
-# ControlPlus.pro
+# Control+
 
-ControlPlus.pro is a personal financial management tool in Portuguese. It provides users with a straightforward and responsive platform to manage their tasks and finances.
+Control+ is a personal financial management tool in Portuguese. It provides users with a straightforward and responsive platform to manage their tasks and finances.
 
 ## Features
 
@@ -23,17 +23,31 @@ ControlPlus.pro is a personal financial management tool in Portuguese. It provid
 
 This project was the capstone project for a trio during Le Wagon São Paulo's bootcamp, between July and September 2022.
 
+## Table of Contents
+
+- [Installation and Setup](#installation-and-setup)
+  - [Prerequisites](#prerequisites)
+  - [Dependencies](#dependencies)
+  - [Configuration](#configuration)
+  - [Running the project locally](#running-the-project-locally)
+  - [Deployment](#deployment)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [License](#license)
+
 ## Installation and Setup
 
 This web application can be accessed directly at [https://controlplus.pro](https://controlplus.pro). If you want to set up the project locally or contribute to its development, follow these steps:
 
 ### Prerequisites
 
-1. Ruby 3.1.2
-2. Rails 7.0.3.1
-3. Node.js 16.x.x
-4. Yarn 1.22.19
-5. PostgreSQL
+1. [Ruby](https://www.ruby-lang.org/en/) 3.1.2
+2. [Rails](https://rubyonrails.org/) 7.0.3.1
+3. [Node.js](https://nodejs.org/en/) 16.x.x
+4. [Yarn](https://yarnpkg.com/) 1.22.19
+5. [PostgreSQL](https://www.postgresql.org/)
+6. [Cloudinary](https://cloudinary.com/) account and credentials for image hosting
 
 ### Dependencies
 
@@ -41,10 +55,11 @@ In addition to the prerequisites, you'll need to install the following external 
 
 - [Devise](https://github.com/heartcombo/devise)
 - [Simple Form](https://github.com/heartcombo/simple_form)
+- [Stimulus](https://stimulus.hotwire.dev/)
 
 ### Configuration
 
-No special configuration is required for this application.
+No additional configuration is needed beyond the standard Rails configuration.
 
 ### Running the project locally
 
@@ -52,10 +67,10 @@ To run the project locally, follow these steps:
 
 1. Clone the repository to your local machine: `git clone https://github.com/your_username/your_project.git`
 2. Change into the project directory: `cd your_project`
-3. Install the required Ruby gems, including Devise and Simple Form: `bundle install`
+3. Install the required Ruby gems: `bundle install`
 4. Install the required JavaScript packages: `yarn install`
 5. Set up the database: `rails db:create db:migrate db:seed`
-6. Start the rails server: `rails s`
+6. Start the development server: `rails s`
 
 Now you can access the application in your web browser at `http://localhost:3000`
 
@@ -63,7 +78,7 @@ Now you can access the application in your web browser at `http://localhost:3000
 
 The project is deployed to Heroku. To deploy your own version of the project, follow these steps:
 
-1. Install the Heroku CLI and log in with your Heroku account: `heroku login`
+1. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and log in with your Heroku account: `heroku login`
 2. Create a new Heroku app: `heroku create your-app-name`
 3. Set up your app's environment variables in Heroku:
 
@@ -76,4 +91,22 @@ The project is deployed to Heroku. To deploy your own version of the project, fo
 
 Your application should now be live on Heroku.
 
-If you encounter any issues, please refer to the [Heroku documentation](https://devcenter.heroku.com/articles/getting-started-with-rails6) for further guidance.
+If you encounter any issues, please refer to the [Heroku documentation](https://devcenter.heroku.com/) for more information.
+
+## Usage
+
+To use [Control+](https://controlplus.pro), simply log in with your account credentials or create a new account. Once you are logged in, you can create, edit, and delete tasks and financial entries, as well as view your receivables and payables.
+
+If you'd like a step-by-step guide, you can find one [here](https://app.tango.us/app/workflow/Workflow-with-Controlplus-dd126d98a70f4b328b1cb1f76ff5b300).
+
+## Contributing
+
+If you want to contribute to ControlPlus.pro, please fork the repository and make your changes. When you are ready to submit your changes, create a pull request with a detailed description of the changes you made.
+
+## Credits
+
+ControlPlus.pro was created by [Rafael Kasinski](https://github.com/PurpleKaz81), [Suzane Andrade](https://github.com/suzaneandrade100), and [Gabriel Soares](https://github.com/gabrielsoares1) during the Le Wagon São Paulo bootcamp, between July and September 2022. Further contributions were made by [Fabian Carlos](https://github.com/fabiancarlos)
+
+## License
+
+ControlPlus.pro is open source software licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
