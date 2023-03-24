@@ -21,7 +21,7 @@
 
 - Fully responsive design for tablets and mobile devices.
 
-This project was the capstone project for a trio during Le Wagon São Paulo's bootcamp, between July and September 2022.
+This was the capstone project during Le Wagon São Paulo's bootcamp, between July and September 2022. The authors' info can be found below.
 
 ## A Quick Look
 
