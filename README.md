@@ -23,6 +23,21 @@
 
 This project was the capstone project for a trio during Le Wagon São Paulo's bootcamp, between July and September 2022.
 
+## A Quick Look
+
+<br>
+<div style="display:flex">
+  <div style="flex:1;padding-right:10px;">
+    <img src="app/assets/images/controlplus-home-page.jpeg" alt="Home Screenshot" style="max-width:100%;" />
+    <p style="text-align:center;">What users see when not logged in</p>
+  </div>
+  <div style="flex:1;padding-left:10px;">
+    <img src="app/assets/images/controlplus-dahsboard.jpeg" alt="Dashboard Screenshot" style="max-width:93%;" />
+    <p style="text-align:center;">What users see when logged in</p>
+  </div>
+</div>
+<br>
+
 ## Table of Contents
 
 - [Installation and Setup](#installation-and-setup)
